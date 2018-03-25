@@ -28,7 +28,6 @@
                 });
 
             })
-
             $("#nav_12_official").click(function() {
                 $(".official.12").each(function() {
                     $(this).show();
@@ -36,8 +35,54 @@
                 $("#TABLE table tbody tr").not(".official.12").each(function() {
                     $(this).hide();
                 });
-
-
+            })
+            $("#nav_12_dage").click(function() {
+                $(".music_stage.12").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".music_stage.12").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_12_Radio").click(function() {
+                $(".Radio.12").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".Radio.12").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_12_group_arts").click(function() {
+                $(".group_arts.12").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".group_arts.12").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_12_tv_station").click(function() {
+                $(".tv_station.12").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".tv_station.12").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_12_pub_performance").click(function() {
+                $(".pub_performance.12").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".pub_performance.12").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_12_news").click(function() {
+                $(".news.12").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".news.12").each(function() {
+                    $(this).hide();
+                });
             })
 
 
@@ -122,50 +167,50 @@
 					</button>
                     <a class="navbar-brand">BTOB</a>
                 </div>
-                <div class="navbar-collapse collapse">
+                <div class="navbar-collapse collapse" id="nav_collapse">
                     <ul class="nav navbar-nav">
                         <!--2012-->
                         <li class="dropdown">
                             <a href="##" data-toggle="dropdown" class="dropdown-toggle" id="nav_12">2012<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li id="nav_12_all"><a href="##">全部活动</a></li>
-                                <li id="nav_12_official"><a href="##">官方</a></li>
-                                <li id="nav_12_dage"><a href="##">音乐放送</a></li>
-                                <li id="nav_12_Radio"><a href="##">电台</a></li>
-                                <li id="nav_12_group_arts"><a href="##">团综</a></li>
-                                <li id="nav_12_TV_pro"><a href="##">电视台放送</a></li>
-                                <li id="nav_12_pub_performance"><a href="##">公演</a></li>
-                                <li id="nav_12_news"><a href="##">新闻</a></li>
+                                <li id="nav_12_all"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">全部活动</a></li>
+                                <li id="nav_12_official"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">官方</a></li>
+                                <li id="nav_12_dage"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">音乐放送</a></li>
+                                <li id="nav_12_Radio"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电台</a></li>
+                                <li id="nav_12_group_arts"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">团综</a></li>
+                                <li id="nav_12_tv_station"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电视台放送</a></li>
+                                <li id="nav_12_pub_performance"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">公演</a></li>
+                                <li id="nav_12_news"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">新闻</a></li>
                             </ul>
                         </li>
                         <!--2013-->
                         <li class="dropdown" style="">
                             <a href="##" data-toggle="dropdown" class="dropdown-toggle" id="nav_12">2013<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li id="nav_13_all"><a href="##">全部活动</a></li>
-                                <li id="nav_13_mv"><a href="##">官方</a></li>
-                                <li id="nav_13_dage"><a href="##">音乐放送</a></li>
-                                <li id="nav_13_Radio"><a href="##">电台</a></li>
-                                <li id="nav_13_group_arts"><a href="##">团综</a></li>
-                                <li id="nav_13_TV_pro"><a href="##">电视台放送</a></li>
-                                <li id="nav_13_teleplay"><a href="##">电视剧</a></li>
-                                <li id="nav_13_VLOG"><a href="##">VLOG</a></li>
+                                <li id="nav_13_all"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">全部活动</a></li>
+                                <li id="nav_13_mv"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">官方</a></li>
+                                <li id="nav_13_dage"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">音乐放送</a></li>
+                                <li id="nav_13_Radio"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电台</a></li>
+                                <li id="nav_13_group_arts"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">团综</a></li>
+                                <li id="nav_13_tv_station"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电视台放送</a></li>
+                                <li id="nav_13_teleplay"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电视剧</a></li>
+                                <li id="nav_13_VLOG"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">VLOG</a></li>
                             </ul>
                         </li>
                         <!--2014-->
                         <li class="dropdown">
                             <a href="##" data-toggle="dropdown" class="dropdown-toggle" id="nav_12">2014<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li id="nav_14_all"><a href="##">全部活动</a></li>
-                                <li id="nav_14_mv"><a href="##">官方</a></li>
-                                <li id="nav_14_dage"><a href="##">音乐放送</a></li>
-                                <li id="nav_14_Radio"><a href="##">电台</a></li>
-                                <li id="nav_14_group_arts"><a href="##">团综</a></li>
-                                <li id="nav_14_TV_pro"><a href="##">电视台放送</a></li>
-                                <li id="nav_14_teleplay"><a href="##">电视剧</a></li>
-                                <li id="nav_14_VLOG"><a href="##">VLOG</a></li>
-                                <li id="nav_14_pub_performance"><a href="##">公演</a></li>
-                                <li id="nav_14_news"><a href="##">新闻</a></li>
+                                <li id="nav_14_all"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">全部活动</a></li>
+                                <li id="nav_14_mv"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">官方</a></li>
+                                <li id="nav_14_dage"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">音乐放送</a></li>
+                                <li id="nav_14_Radio"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电台</a></li>
+                                <li id="nav_14_group_arts"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">团综</a></li>
+                                <li id="nav_14_tv_station"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电视台放送</a></li>
+                                <li id="nav_14_teleplay"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电视剧</a></li>
+                                <li id="nav_14_VLOG"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">VLOG</a></li>
+                                <li id="nav_14_pub_performance"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">公演</a></li>
+                                <li id="nav_14_news"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">新闻</a></li>
                             </ul>
                         </li>
 
@@ -183,6 +228,7 @@
         </div>
         <!-- navbar end -->
 
+        <!--        month select-->
         <div id="mon_selet">
             <a class="glyphicon glyphicon-cloud">1</a>
             <a class="glyphicon glyphicon-cloud">2</a>
@@ -197,6 +243,8 @@
             <a class="glyphicon glyphicon-cloud">11</a>
             <a class="glyphicon glyphicon-cloud">12</a>
         </div>
+
+
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <div id="TABLE" style="width: 90%;margin: 10%;">
@@ -1418,11 +1466,11 @@
 
         </div>
 
+        <div type="button" class="btn btn-info btn-sm" style="position: fixed;bottom: 10px;right: 2%;">
+            <a class="glyphicon glyphicon-arrow-up" href="javascript:scrollTo(0,0);" style="color: white;"></a>
+        </div>
+
     </div>
-
-
-
-
 </body>
 
 
