@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
-        $().ready(function() {
+        $(document).ready(function() {
             $("#2012").show();
             $("#TABLE table tbody tr").not(".12").each(function() {
                 $(this).hide();
@@ -225,6 +225,17 @@
             })
             //---------------- 2015 --------------
 
+
+            //---------- month select ------------
+            $("#p1").click(function() {
+                $("#MON7").animate({
+                    scrollTop: $("#month7").offset().top
+                }, {
+                    duration: 500,
+                    easing: "swing"
+                });
+                return false;
+            });
         });
 
     </script>
@@ -394,7 +405,7 @@
             <a class="glyphicon glyphicon-cloud" href="#mon04">4</a>
             <a class="glyphicon glyphicon-cloud" href="#mon05">5</a>
             <a class="glyphicon glyphicon-cloud" href="#mon06">6</a>
-            <a class="glyphicon glyphicon-cloud" href="#mon07">7</a>
+            <a class="glyphicon glyphicon-cloud" href="#mon07" id="MON7">7</a>
             <a class="glyphicon glyphicon-cloud" href="#mon08">8</a>
             <a class="glyphicon glyphicon-cloud" href="#mon09">9</a>
             <a class="glyphicon glyphicon-cloud" href="#mon10">10</a>
@@ -407,7 +418,6 @@
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <div id="TABLE" style="width: 90%;margin: 10%;">
             <!-- <img id="pic" src="http://wx1.sinaimg.cn/large/006HiDTFgy1fmsu2d4trjj31410qoq9e.jpg" onload="($CONFIG.img_size.w = this.width,$CONFIG.img_size.h = this.height, $CONFIG.init_zoom(this))"/> -->
-
 
             <table class="table table-hover">
                 <thead>
@@ -422,114 +432,117 @@
                     <!-- 2012 -->
                     <div id="2012">
                         <!--7月-->
-                        <tr class="12 group_arts">
-                            <td>120726</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDM2NDUxNjg4.html" name="mon07">【中字】MTV Diary E20 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120726</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDM2NjMyOTU2.html" name="mon07">【中字】MTV Diary E19 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120724</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDM1ODgxMzc2.html" name="mon07">【中字】MTV Diary E18 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120723</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDM0NzcyNzAw.html" name="mon07">【中字】MTV Diary E17 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 tv_station">
-                            <td>120721</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDMwMjE2MjQ4.html" name="mon07">KBS 希望之路大長征 (G.naBTOB恩光.昌燮4minute嘉允)</a></td>
-                            <td>电视台放送</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120719</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDMzNzU2NjI0.html" name="mon07">【中字】MTV Diary E16 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 tv_station">
-                            <td>120718</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDM3Njk5ODY4.html" name="mon07">【中字】4minute的Travel Maker EP1 中字 (上)</a></td>
-                            <td>电视台放送</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120718</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDMzNTE0NjMy.html" name="mon07">【中字】MTV Diary E15 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120717</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDMyNDE4Njcy.html" name="mon07">【中字】MTV Diary E14 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120716</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDMxNjcwOTYw.html" name="mon07">【中字】MTV Diary E13 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120712</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDMyMTQwMDI0.html" name="mon07">【中字】MTV Diary E12 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120711</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDI5NDMxMjAw.html" name="mon07">【中字】MTV Diary E11 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120710</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDI4OTE3MDUy.html" name="mon07">【中字】MTV Diary E10 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120709</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDI3Nzc3MzI4.html" name="mon07">【中字】MTV Diary E09 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120705</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDI3NDAyMTc2.html" name="mon07">【中字】MTV Diary E08 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120704</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDI2NjY2Mjg4.html" name="mon07">【中字】MTV Diary E07 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120703</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDI1NTUyMTcy.html" name="mon07">【中字】MTV Diary E06 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
-                        <tr class="12 group_arts">
-                            <td>120702</td>
-                            <td><a href="http://v.youku.com/v_show/id_XNDI1Mzg4MjQ4.html" name="mon07">【中字】MTV Diary E05 BTOB Cut </a></td>
-                            <td>团综</td>
-                            <td>暂无</td>
-                        </tr>
+                        <div id="month7">
+                            <tr class="12 group_arts">
+                                <td>120726</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDM2NDUxNjg4.html" name="mon07">【中字】MTV Diary E20 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120726</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDM2NjMyOTU2.html" name="mon07">【中字】MTV Diary E19 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120724</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDM1ODgxMzc2.html" name="mon07">【中字】MTV Diary E18 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120723</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDM0NzcyNzAw.html" name="mon07">【中字】MTV Diary E17 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 tv_station">
+                                <td>120721</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDMwMjE2MjQ4.html" name="mon07">KBS 希望之路大長征 (G.naBTOB恩光.昌燮4minute嘉允)</a></td>
+                                <td>电视台放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120719</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDMzNzU2NjI0.html" name="mon07">【中字】MTV Diary E16 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 tv_station">
+                                <td>120718</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDM3Njk5ODY4.html" name="mon07">【中字】4minute的Travel Maker EP1 中字 (上)</a></td>
+                                <td>电视台放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120718</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDMzNTE0NjMy.html" name="mon07">【中字】MTV Diary E15 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120717</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDMyNDE4Njcy.html" name="mon07">【中字】MTV Diary E14 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120716</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDMxNjcwOTYw.html" name="mon07">【中字】MTV Diary E13 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120712</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDMyMTQwMDI0.html" name="mon07">【中字】MTV Diary E12 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120711</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDI5NDMxMjAw.html" name="mon07">【中字】MTV Diary E11 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120710</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDI4OTE3MDUy.html" name="mon07">【中字】MTV Diary E10 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120709</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDI3Nzc3MzI4.html" name="mon07">【中字】MTV Diary E09 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120705</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDI3NDAyMTc2.html" name="mon07">【中字】MTV Diary E08 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120704</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDI2NjY2Mjg4.html" name="mon07">【中字】MTV Diary E07 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120703</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDI1NTUyMTcy.html" name="mon07">【中字】MTV Diary E06 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="12 group_arts">
+                                <td>120702</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNDI1Mzg4MjQ4.html" name="mon07">【中字】MTV Diary E05 BTOB Cut </a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                        </div>
+
                         <!--6月-->
                         <tr class="12 official">
                             <td>120629</td>
