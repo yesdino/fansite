@@ -271,6 +271,113 @@
             //---------------- 2015 --------------
 
 
+            //---------------- 2016 --------------
+            $("#nav_16_all").click(function() {
+                $(".16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".16").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_16_official").click(function() {
+                $(".official.16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".official.16").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_16_dage").click(function() {
+                $(".music_stage.16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".music_stage.16").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_16_Radio").click(function() {
+                $(".Radio.16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".Radio.16").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_16_group_arts").click(function() {
+                $(".group_arts.16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".group_arts.16").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_16_tv_station").click(function() {
+                $(".tv_station.16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".tv_station.16").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_16_news").click(function() {
+                $(".news.16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".news.16").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_16_VLOG").click(function() {
+                $(".VLOG.16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".VLOG.16").each(function() {
+                    $(this).hide();
+                });
+            })
+
+            $("#nav_16_pub_performance").click(function() {
+                $(".pub_performance.16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".pub_performance.16").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_16_magazine").click(function() {
+                $(".magazine.16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".magazine.16").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_16_FM").click(function() {
+                $(".FM.16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".FM.16").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_16_concert").click(function() {
+                $(".concert.16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".concert.16").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_16_other").click(function() {
+                $(".other.16").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".other.16").each(function() {
+                    $(this).hide();
+                });
+            })
+
             //---------- month select ------------
             //            var mon6_top = $("#month6").offset().top; // var mon7_top = $("#month7").offset().top; // $("#MON6").click(function() { // $("html, body").animate({ // scrollTop: mon6_top // }, { // duration: 500, // easing: "swing" // }); // //return false; // }); // $("#MON7").click(function() { // $("html, body").animate({ // scrollTop: mon7_top // }, { // duration: 500, // easing: "swing" // }); // //return false; // });
         });
@@ -438,7 +545,6 @@
                                 <li id="nav_13_tv_station"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">放送</a></li>
                                 <li id="nav_13_news"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">新闻</a></li>
                                 <li id="nav_13_VLOG"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">VLOG</a></li>
-
                                 <li id="nav_13_pub_performance"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">公演</a></li>
                                 <li id="nav_13_magazine"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">画报</a></li>
                                 <li id="nav_13_FM"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">FM</a></li>
@@ -447,23 +553,26 @@
                             </ul>
                         </li>
                         <!--2014-->
-                        <li class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle">2014<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li id="nav_14_all"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">全部活动</a></li>
-                                <li id="nav_14_official"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">官方</a></li>
-                                <li id="nav_14_dage"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">音放</a></li>
-                                <li id="nav_14_Radio"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电台</a></li>
-                                <li id="nav_14_group_arts"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">团综</a></li>
-                                <li id="nav_14_tv_station"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">放送</a></li>
-                                <li id="nav_14_teleplay"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电视剧</a></li>
-                                <li id="nav_14_VLOG"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">VLOG</a></li>
-                                <li id="nav_14_pub_performance"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">公演</a></li>
-                                <li id="nav_14_news"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">新闻</a></li>
-                                <li id="nav_14_magazine"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">画报</a></li>
-                            </ul>
-                        </li>
+                        <!--
+<li class="dropdown">
+    <a data-toggle="dropdown" class="dropdown-toggle">2014<span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        <li id="nav_14_all"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">全部活动</a></li>
+        <li id="nav_14_official"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">官方</a></li>
+        <li id="nav_14_dage"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">音放</a></li>
+        <li id="nav_14_Radio"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电台</a></li>
+        <li id="nav_14_group_arts"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">团综</a></li>
+        <li id="nav_14_tv_station"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">放送</a></li>
+        <li id="nav_14_teleplay"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电视剧</a></li>
+        <li id="nav_14_VLOG"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">VLOG</a></li>
+        <li id="nav_14_pub_performance"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">公演</a></li>
+        <li id="nav_14_news"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">新闻</a></li>
+        <li id="nav_14_magazine"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">画报</a></li>
+    </ul>
+</li>
+-->
                         <!--2015-->
+                        <!--
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle">2015<span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -479,12 +588,32 @@
                                 <li id="nav_15_news"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">新闻</a></li>
                             </ul>
                         </li>
+-->
+                        <!--2016-->
+                        <li class="dropdown" style="">
+                            <a data-toggle="dropdown" class="dropdown-toggle">2016<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li id="nav_16_all"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">全部活动</a></li>
+                                <li id="nav_16_official"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">官方</a></li>
+                                <li id="nav_16_dage"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">音放</a></li>
+                                <li id="nav_16_Radio"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电台</a></li>
+                                <li id="nav_16_group_arts"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">团综</a></li>
+                                <li id="nav_16_tv_station"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">放送</a></li>
+                                <li id="nav_16_news"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">新闻</a></li>
+                                <li id="nav_16_VLOG"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">VLOG</a></li>
+                                <li id="nav_16_pub_performance"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">公演</a></li>
+                                <li id="nav_16_magazine"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">画报</a></li>
+                                <li id="nav_16_FM"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">FM</a></li>
+                                <li id="nav_16_concert"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">演唱会</a></li>
+                                <li id="nav_16_other"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">其他</a></li>
+                            </ul>
+                        </li>
 
-                        <li><a href="##">2016</a></li>
-
+                        <!--
                         <li><a href="##">2017</a></li>
 
                         <li class=""><a href="##">2018</a></li>
+-->
 
                     </ul>
                 </div>
@@ -4287,7 +4416,7 @@
                     <!-- 2015 end -->
 
                     <!-- 2016-->
-                    <div id="2015">
+                    <div id="2016">
                         <!-- 12月 -->
                         <div class="month12"></div>
                         <!-- 11月 -->
@@ -4552,7 +4681,7 @@
                             </tr>
                         </div>
                     </div>
-                    <!-- 2015 end -->
+                    <!-- 2016 end -->
 
                     <!-- 2017 -->
                     <div id="2017">
