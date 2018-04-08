@@ -16,7 +16,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             //$("#2012").show();
-            $("#TABLE table tbody tr").not(".13").each(function() {
+            $("#TABLE table tbody tr").not(".16").each(function() {
                 $(this).hide();
             });
 
@@ -135,7 +135,7 @@
                     $(this).hide();
                 });
             })
-            $("#nav_13_teleplay").click(function() {
+            $("#nav_13_news").click(function() {
                 $(".news.13").each(function() {
                     $(this).show();
                 });
@@ -151,6 +151,50 @@
                     $(this).hide();
                 });
             })
+
+            $("#nav_13_pub_performance").click(function() {
+                $(".pub_performance.13").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".pub_performance.13").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_13_magazine").click(function() {
+                $(".magazine.13").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".magazine.13").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_13_FM").click(function() {
+                $(".FM.13").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".FM.13").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_13_concert").click(function() {
+                $(".concert.13").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".concert.13").each(function() {
+                    $(this).hide();
+                });
+            })
+            $("#nav_13_other").click(function() {
+                $(".other.13").each(function() {
+                    $(this).show();
+                });
+                $("#TABLE table tbody tr").not(".other.13").each(function() {
+                    $(this).hide();
+                });
+            })
+
+
+
             //---------------- 2014 --------------
             $("#nav_14_all").click(function() {
                 $(".14").each(function() {
@@ -228,26 +272,7 @@
 
 
             //---------- month select ------------
-            var mon6_top = $("#month6").offset().top;
-            var mon7_top = $("#month7").offset().top;
-            $("#MON6").click(function() {
-                $("html, body").animate({
-                    scrollTop: mon6_top
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-                //return false;
-            });
-            $("#MON7").click(function() {
-                $("html, body").animate({
-                    scrollTop: mon7_top
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                });
-                //return false;
-            });
+            //            var mon6_top = $("#month6").offset().top; // var mon7_top = $("#month7").offset().top; // $("#MON6").click(function() { // $("html, body").animate({ // scrollTop: mon6_top // }, { // duration: 500, // easing: "swing" // }); // //return false; // }); // $("#MON7").click(function() { // $("html, body").animate({ // scrollTop: mon7_top // }, { // duration: 500, // easing: "swing" // }); // //return false; // });
         });
 
     </script>
@@ -282,7 +307,7 @@
         }
 
         .group_arts {
-            background-color: rgb(206, 243, 252)
+            background-color: rgb(201, 245, 255)
         }
 
         .teleplay {
@@ -290,7 +315,7 @@
         }
 
         .VLOG {
-            background-color: #99CCFF;
+            background-color: #d4fab4;
         }
 
         .pub_performance {
@@ -314,7 +339,7 @@
         }
 
         .concert {
-            background-color: #c3c3f7;
+            background-color: #bbedff;
         }
 
         .other {
@@ -328,6 +353,41 @@
             border: 1px solid #D6D8DD;
             border-radius: 10px;
         }
+
+
+
+        #TABLE table tr :nth-child(1),
+        #TABLE table tr :nth-child(3),
+        #TABLE table tr :nth-child(4),
+        #TABLE table tr :nth-child(5) {
+            padding-right: 0;
+            padding-left: 0;
+            margin-right: 0;
+            margin-left: 0;
+            text-align: center;
+            /*            vertical-align: baseline;*/
+        }
+
+        #TABLE table tr :nth-child(1) {
+            /*            background-color: #ffd4a1;*/
+            width: 10%;
+        }
+
+        #TABLE table tr :nth-child(3) {
+            /*            background-color: #a1e9ff;*/
+            width: 12%;
+        }
+
+        #TABLE table tr :nth-child(4) {
+            /*            background-color: #a8a1ff;*/
+            width: 10%;
+        }
+
+        #TABLE table tr :nth-child(5) {
+            /*            background-color: aqua;*/
+            width: 15%;
+        }
+
 
         .Bzhan {
             font-weight: 700;
@@ -376,8 +436,14 @@
                                 <li id="nav_13_Radio"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电台</a></li>
                                 <li id="nav_13_group_arts"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">团综</a></li>
                                 <li id="nav_13_tv_station"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">放送</a></li>
-                                <li id="nav_13_teleplay"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">电视剧</a></li>
+                                <li id="nav_13_news"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">新闻</a></li>
                                 <li id="nav_13_VLOG"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">VLOG</a></li>
+
+                                <li id="nav_13_pub_performance"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">公演</a></li>
+                                <li id="nav_13_magazine"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">画报</a></li>
+                                <li id="nav_13_FM"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">FM</a></li>
+                                <li id="nav_13_concert"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">演唱会</a></li>
+                                <li id="nav_13_other"><a href="javascript:scrollTo(0,0);" data-toggle="collapse" data-target="#nav_collapse">其他</a></li>
                             </ul>
                         </li>
                         <!--2014-->
@@ -435,9 +501,9 @@
                     <tr>
                         <th style="">日期</th>
                         <th>在线观看</th>
-                        <th style="width: 13%;background-color: aqua">B站</th>
-                        <th style="width: 13%;background-color: bisque">分类</th>
-                        <th style="width: 13%;">资源</th>
+                        <th style="">B站</th>
+                        <th style="">分类</th>
+                        <th style="">资源</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -2396,7 +2462,7 @@
                                 <td>130929</td>
                                 <td><a href="http://video.tudou.com/v/XMjI0MDk2MjI3Ng==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【打歌】人气歌谣  Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td>暂无</td>
                             </tr>
                             <tr class="13 tv_station">
@@ -2410,14 +2476,14 @@
                                 <td>130928</td>
                                 <td><a href="http://video.tudou.com/v/XMjI0MTAwMDgwNA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】Show Cham BackStage BTOB</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/s/1cJYKq">资源</a></td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130928</td>
                                 <td><a href="http://video.tudou.com/v/XMjI0MDc0Nzg1Ng==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【打歌】音乐中心 Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td>暂无</td>
                             </tr>
                             <tr class="13 tv_station">
@@ -2431,7 +2497,7 @@
                                 <td>130927</td>
                                 <td><a href="http://v.youku.com/v_show/id_XNjE0NDg3Njcy.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2">【打歌】音乐银行 Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td>暂无</td>
                             </tr>
                             <tr class="13 news">
@@ -2445,28 +2511,28 @@
                                 <td>130925</td>
                                 <td><a href="http://video.tudou.com/v/XMjI0MDI4MDkwMA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】SHOW CHAM BTOB 赛诗会（下）</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/s/122nKE">资源</a></td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130925</td>
                                 <td><a href="http://video.tudou.com/v/XMjI0MDI2MTYyOA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】SHOW CHAM BTOB 赛诗会（上）</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/s/122nED">资源</a></td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130925</td>
                                 <td><a href="http://video.tudou.com/v/XMjI0MDI0OTY3Mg==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【打歌】Show Champion Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/s/1A9JkX">资源</a></td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130924</td>
                                 <td><a href="http://video.tudou.com/v/XMjI0MDA1MTYwOA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【打歌】Simply Kpop 我曾是你男人时 + talk +Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td>暂无</td>
                             </tr>
                             <tr class="13 Radio">
@@ -2480,7 +2546,7 @@
                                 <td>130923</td>
                                 <td><a href="http://video.tudou.com/v/XMjI0MTA2MjMwMA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】Arirang TVTalk & Behind Simply K-Pop BTOB CUT</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/s/1wwPGV">资源</a></td>
                             </tr>
                             <tr class="13 Radio">
@@ -2501,14 +2567,14 @@
                                 <td>130922</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzOTY1MjQ4NA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【打歌】人气歌谣  Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td>暂无</td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130921</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzOTQ3ODk0NA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【打歌】音乐中心 Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td>暂无</td>
                             </tr>
                             <tr class="13 tv_station">
@@ -2543,21 +2609,21 @@
                                 <td>130918</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzOTM0NDY4MA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】SHOW CHAM MC BTOB 镒勋、星材、Amber CUT </a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/share/link?shareid=696276239&uk=1074070979">资源</a></td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130918</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzOTI5ODcyOA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】ShowCham BTOB中秋祝福</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/share/link?shareid=2020963374&uk=1074070979">资源</a></td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130918</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzOTIxMzEwMA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【打歌】Show Champion Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td>暂无</td>
                             </tr>
                             <tr class="13 tv_station">
@@ -2592,21 +2658,21 @@
                                 <td>130915</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzODU1NTAzMg==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【打歌】人气歌谣  Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td>暂无</td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130914</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzODUxMjk0MA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】Show Champion Back Stage BTOB</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/share/link?shareid=1169778536&uk=1074070979">资源</a></td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130914</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzODQzNDg4MA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【打歌】音乐中心 Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td>暂无</td>
                             </tr>
                             <tr class="13 tv_station">
@@ -2655,14 +2721,14 @@
                                 <td>130911</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzODAzNTIwOA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】SHOW CHAM TV BTOB CUT</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/share/link?shareid=4259886034&uk=1074070979">资源</a></td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130911</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzNzk5MTU2NA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【打歌】Show Champion Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td>暂无</td>
                             </tr>
                             <tr class="13 official">
@@ -2690,28 +2756,28 @@
                                 <td>130908</td>
                                 <td><a href="http://v.yinyuetai.com/video/760280">【打歌】人气歌谣 我曾是你的男人时 ＆ Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td>暂无</td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130907</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzNzUwMTc2MA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】Show Champion Back Stage BTOB CUT </a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/share/link?shareid=100577798&uk=1074070979">资源</a></td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130907</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzNzM0MTY2OA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【打歌】音乐中心 Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td>暂无</td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130906</td>
                                 <td><a href="http://video.tudou.com/v/XMjIzNzIzNzAwOA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【打歌】音乐银行 Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/share/link?shareid=459023451&uk=2436361416">资源</a></td>
                             </tr>
                             <tr class="13 tv_station">
@@ -2730,7 +2796,7 @@
                             </tr>
                             <tr class="13 official">
                                 <td>130904</td>
-                                <td><a href="http://video.tudou.com/v/XMjIzNzA2OTYwNA==.html?bid=03&pid=2&resourceId=71471910_03_05_02#BTOBISBACK# ????">【中字】Thriller MV</a></td>
+                                <td><a href="http://video.tudou.com/v/XMjIzNzA2OTYwNA==.html?bid=03&pid=2&resourceId=71471910_03_05_02#BTOBISBACK# ">【中字】Thriller MV</a></td>
                                 <td><a href="https://www.bilibili.com/video/av12308969/?p=10">B站</a></td>
                                 <td>官方</td>
                                 <td>暂无</td>
@@ -2753,14 +2819,14 @@
                                 <td>130904</td>
                                 <td><a href="http://v.yinyuetai.com/video/756803">【打歌】Show Champion 我曾是你男人时</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/share/link?shareid=4046472859&uk=1074070979">资源</a></td>
                             </tr>
                             <tr class="13 music_stage">
                                 <td>130904</td>
                                 <td><a href="http://v.yinyuetai.com/video/756794">【打歌】Show Champion Thriller</a></td>
                                 <td>暂无</td>
-                                <td>音乐放送</td>
+                                <td>音放</td>
                                 <td><a href="https://pan.baidu.com/share/link?shareid=4046472859&uk=1074070979">资源</a></td>
                             </tr>
                             <tr class="13 tv_station">
@@ -2985,42 +3051,1548 @@
                                 <td>暂无</td>
                             </tr>
                         </div>
-                        <div class="month6"></div>
-                        <div class="month5"></div>
-                        <div class="month4"></div>
-                        <div class="month3"></div>
-                        <div class="month2"></div>
-                        <div class="month1"></div>
+                        <div class="month6">
+                            <tr class="13 Radio">
+                                <td>130630</td>
+                                <td>【中字】Super Junior Kiss The Radio（恩光、炫植）</td>
+                                <td>暂无</td>
+                                <td>电台</td>
+                                <td><a href="https://pan.baidu.com/s/17oKWb">资源</a></td>
+                            </tr>
+                            <tr class="13 group_arts">
+                                <td>130629</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyNzY2ODc4NA==.html?rpid=71471910">【中字】成为你的Melody Season1 星材 - 记忆的习作</a></td>
+                                <td><a href="https://www.bilibili.com/video/av3015572?from=search&seid=10331608130853015447">B站</a></td>
+                                <td>成你mel</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=1933765195&uk=2436361416">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130627</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyNzU0OTgwMA==.html?rpid=71471910">【中字】黄金camera E07 （镒勋）</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 Radio">
+                                <td>130623</td>
+                                <td><a href="http://video.tudou.com/v/XMjIzMjc4OTU4NA==.html?rpid=71471910">【中字】Super Junior Kiss The Radio（恩光、炫植）</a></td>
+                                <td>暂无</td>
+                                <td>电台</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=2863845429&uk=473414338">资源</a></td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130623</td>
+                                <td>【中字】BTOB Behind 生存报告 in 迷你演唱会</td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=1208193831&uk=372738242">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130621</td>
+                                <td>【中字】Monstar E06 BTOB CUT</td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=50958316&uk=372738242">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130620</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyNjY1Mjc4MA==.html?rpid=71471910">【中字】黄金camera E06 （镒勋）</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 Radio">
+                                <td>130616</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyODYxODk1Ng==.html?rpid=71471910">【中字】Super Junior Kiss The Radio（恩光、炫植）</a></td>
+                                <td>暂无</td>
+                                <td>电台</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 pub_performance">
+                                <td>130613</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTcwMjc4MzQ0.html">分享希望演唱会 - BTOB 第二次告白 </a></td>
+                                <td>暂无</td>
+                                <td>公演</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130612</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTcxNDIxNjIw.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2">【中字】一周的偶像 （镒勋cut）</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 Radio">
+                                <td>130609</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTg5NzU1NTQ0.html">【中字】Super Junior Kiss The Radio（恩光、炫植）</a></td>
+                                <td>暂无</td>
+                                <td>电台</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130609</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyNTMwMDg4MA==.html?rpid=71471910">【中字】KNTV BTOB - MUSIC KAN Star Date</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130605</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMzE3OTA0MA==.html?rpid=71471910">【中字】Hallo' BTOB Star Chat vol.3 </a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 group_arts">
+                                <td>130605</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyNDQ5MTM2NA==.html?rpid=71471910">【中字】Hallo' BTOB Star Chat vol.2</a></td>
+                                <td>暂无</td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130605</td>
+                                <td><a href="http://www.tudou.com/programs/view/TuosYbwvx7g/?bid=03&pid=02&resourceId=0_03_05_02">【中字】一周的偶像 BTOB</a></td>
+                                <td><a href="https://www.bilibili.com/video/av12373927">B站</a></td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 group_arts">
+                                <td>130603</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyNDIzNzQwNA==.html?resourceId=0_06_05_99">【中字】Hallo' BTOB Star Chat vol.1</a></td>
+                                <td>暂无</td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130603</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyNDIwMTA0OA==.html?rpid=71471910">【中字】Behind Story - BTOB 生存报告 in 釜山</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                        </div>
+                        <div class="month5">
+                            <tr class="13 music_stage">
+                                <td>130531</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMzY0MjkwMA==.html?rpid=71471910">【中字】2013梦想演唱会 behind story BTOB</a></td>
+                                <td><a href="https://www.bilibili.com/video/av13796798?from=search&seid=9655511032333046102">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130531</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMzYzNzcwOA==.html?rpid=71471910">梦想演唱会 第二次告白</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 magazine">
+                                <td>130529</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMzMwODMyMA==.html?rpid=71471910">【中字】K-WAVE 6月号 BTOB 摄影现场</a></td>
+                                <td>暂无</td>
+                                <td>杂志</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=596706&uk=372738242">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130528</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNjQyNDEwMTEy.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2&f=21901007">【中字】无计划家族2 EP34 旼赫 CUT （完）</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130528</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMzI5NDY2OA==.html?rpid=71471910">【打歌】Simply K-Pop 第二次告白</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 Radio">
+                                <td>130526</td>
+                                <td><a href="http://video.tudou.com/v/XMjIzMDU3NzI0NA==.html?rpid=71471910">【中字】Super Junior Kiss The Radio （恩光、炫植）</a></td>
+                                <td>暂无</td>
+                                <td>电台</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 news">
+                                <td>130526</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMjgzOTU5Mg==.html?rpid=71471910">KPOP Dream Concert Live In Malaysia 第二次告白  + Oops</a></td>
+                                <td>暂无</td>
+                                <td>新闻</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 news">
+                                <td>130525</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMjcxMDEzNg==.html?rpid=71471910">BTOB Press Play Party 2013 柬埔寨</a></td>
+                                <td>暂无</td>
+                                <td>新闻</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 news">
+                                <td>130525</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMjcxMDE0NA==.html?rpid=71471910">BTOB 访问 柬埔寨孤儿院</a></td>
+                                <td>暂无</td>
+                                <td>新闻</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 news">
+                                <td>130525</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMjcxMTUwNA==.html?rpid=71471910">Insane/WOW/Talk BTOB - KPOP Dream Concert Live In Malaysia </a></td>
+                                <td>暂无</td>
+                                <td>新闻</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130525</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMjY4MDMwOA==.html?rpid=71471910">4minute 昭贤 BTOB 星材 trouble maker in 难堪学校</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130524</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTY2MjQzNzk2.html">【中字】难堪学校</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130524</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMjcxMzM0MA==.html?rpid=71471910">【中字】Monstar EP2 Main In black Cut</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130524</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMjYzMTM2NA==.html?rpid=71471910">【中字】Monstar Behind story 11- 偷窥 Man In Black</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130521</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMjMyNjc2NA==.html?rpid=71471910">【打歌】Simply K-Pop 第二次告白</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17533922/?p=2">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130521</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNjMyMTkyNzcy.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2&f=21901007">【中字】无计划家族2 EP33 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130521</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMjAxNjYwNA==.html?rpid=71471910">【中字】2013 UNITED CUBE 花絮 BTOB Cut</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 news">
+                                <td>130520</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTU5MzMzNTI0.html">BTOB Press Play Party in Thailand 2013 新闻视频</a></td>
+                                <td>暂无</td>
+                                <td>新闻</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 Radio">
+                                <td>130519</td>
+                                <td><a href="http://video.tudou.com/v/XMjIzMTU3Mjg3Mg==.html?rpid=71471910">【中字】Super Junior Kiss The Radio （恩光、炫植）</a></td>
+                                <td>暂无</td>
+                                <td>电台</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130518</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNzM0NDExMTg4.html?spm=a2h0j.11185381.listitem_page1.5!2~A&s=9ac96788be0411e296da">【中字】Monstar E02</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130518</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNzM0NDA5MTQ4.html?spm=a2h0k.8191407.0.0">【中字】Monstar E01</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130516</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMTU5OTE2OA==.html?rpid=71471910">【中字】韩国美术偶像大赛E01 BTOB CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 pub_performance">
+                                <td>130516</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMTEzNTMwOA==.html?rpid=71471910">密阳阿里郎歌谣祭 BTOB 第二次告白</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17533922/?p=2">B站</a></td>
+                                <td>公演</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 magazine">
+                                <td>130515</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTU2OTc3Njk2.html">High Cut Vol.101--> 动态杂志</a></td>
+                                <td>暂无</td>
+                                <td>杂志</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 magazine">
+                                <td>130515</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTU3MTU4NzEy.html">High Cut Vol.101--> 拍摄花絮</a></td>
+                                <td>暂无</td>
+                                <td>杂志</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130514</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNjMyMTE2MTAw.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2&f=17565435">【中字】无计划家族2 EP32 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/s/1gQB4W">资源</a></td>
+                            </tr>
+                            <tr class="13 Radio">
+                                <td>130512</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyNTM0NzU5Mg==.html?rpid=71471910">【中字】Super Junior Kiss The Radio （恩光、炫植）</a></td>
+                                <td>暂无</td>
+                                <td>电台</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=4244146338&uk=372738242">资源</a></td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130510</td>
+                                <td>【打歌】音乐银行 第二次告白</td>
+                                <td><a href="https://www.bilibili.com/video/av17533922?from=search&seid=12323212649418148578">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 pub_performance">
+                                <td>130510</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMDI5MzIyMA==.html?rpid=71471910">2013 韩中K-POP音乐会 BTOB 第二次告白</a></td>
+                                <td>暂无</td>
+                                <td>公演</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130509</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTU0NjE5OTI0.html">MNET Monstar special EP.01 BTOB CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130508</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMDM2NDU0NA==.html?rpid=71471910">【中字】True back show BTOB VIXX cut</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130508</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMDEyMzk1Ng==.html?rpid=71471910">【打歌】Show Champion 第二次告白</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17533922/?p=2">B站</a></td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=459582&uk=2436361416">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130507</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNjMyMTA1ODg0.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2">【中字】无计划家族2 EP31 旼赫、星材 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 Radio">
+                                <td>130505</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMDgzMjIyOA==.html?rpid=71471910">【中字】Super Junior Kiss The Radio （恩光、炫植）</a></td>
+                                <td>暂无</td>
+                                <td>电台</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130503</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxOTMzMDkzMg==.html?rpid=71471910">【打歌】音乐银行 第二次告白</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17533922?from=search&seid=12323212649418148578">B站</a></td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=450490&uk=3275219911">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130501</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxOTM4ODA5Mg==.html?rpid=71471910">【中字】True back show BTOB VIXX cut</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 pub_performance">
+                                <td>130501</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTUyMzc0MzQ4.html">军浦杜鹃庆典BTOB - 第二次告白</a></td>
+                                <td>暂无</td>
+                                <td>公演</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 pub_performance">
+                                <td>130501</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTUyMzY5Mzcy.html">军浦杜鹃庆典 G.NA Oops feat郑镒勋 </a></td>
+                                <td>暂无</td>
+                                <td>公演</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 pub_performance">
+                                <td>130501</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTUyMjIwMDIw.html">军浦杜鹃庆典BTOB - WOW</a></td>
+                                <td>暂无</td>
+                                <td>公演</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130501</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxOTE3NDQ1Mg==.html?rpid=71471910">【打歌】Show Champion 第二次告白</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17533922/?p=2">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                        </div>
+                        <div class="month4">
+                            <tr class="13 Radio">
+                                <td>130430</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMjc5MzM2NA==.html?rpid=71471910">【中字】金范秀的歌谣广场 </a></td>
+                                <td><a href="https://www.bilibili.com/video/av5324991?from=search&seid=14312741755612859155">B站</a></td>
+                                <td>电台</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=590260&uk=372738242">资源</a></td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130430</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxOTIyMzY1Ng==.html?rpid=71471910">【打歌】Simply K-Pop 第二次告白</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=449680&uk=2436361416">资源</a></td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130427</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxODU2NjE2NA==.html?rpid=71471910">【中字】第二次告白 MV making 未公开影像</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=437922&uk=1310732488">资源</a></td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130425</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxODE5ODA3Ng==.html?rpid=71471910">【中字】第二次告白 MV 拍摄花絮</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=433139&uk=1310732488">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130424</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTQ3NjExMjY4.html">【中字】就是愛JK BTOB 下</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130424</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxODM5NTg0NA==.html?rpid=71471910">【中字】Show Champion Backstage - BTOB TV </a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=437125&uk=3275219911">资源</a></td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130424</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxODMwNDYyNA==.html?rpid=71471910">【打歌】Show Champion 第二次告白</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=436814&uk=2436361416#list/path=%2F">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130424</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTQ3NjI1Mzg4.html">【中字】就是愛JK BTOB 上</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130423</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNjA1MDg5NTQ4.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2">【中字】无计划家族2 EP30 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130423</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNjAzODY4Mzk2.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2">【中字】无计划家族2 EP29 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130423</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxODI5NzA0NA==.html?rpid=71471910">【打歌】Simply K-Pop 第二次告白</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=436812&uk=2436361416">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130423</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTQ3MTEyODY4.html">【中字】日韓音樂瘋 BTOB Part2</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130423</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTQ3MTEyOTE2.html">【中字】日韓音樂瘋 BTOB Part1</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 Radio">
+                                <td>130421</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMTM2NjA2OA==.html?rpid=71471910">【中字】Super Junior Kiss The Radio（恩光、炫植）</a></td>
+                                <td>暂无</td>
+                                <td>电台</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130421</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNzcxOTYwOA==.html?rpid=71471910&resourceId=71471910_06_05_99">【打歌】人气歌谣 第二次告白</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17533922?from=search&seid=12323212649418148578">B站</a></td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=428320&uk=1310732488">资源</a></td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130419</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNzUzNjU2OA==.html?rpid=71471910">【中字】第二次告白 初放送 Behind story</a></td>
+                                <td><a href="https://www.bilibili.com/video/av12268663?from=search&seid=1871241953808425903">B站</a></td>
+                                <td>官方</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=426875&uk=1310732488">资源</a></td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130419</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNzQzMjA3Ng==.html?rpid=71471910&resourceId=71471910_06_05_99">【打歌】音乐银行 第二次告白</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17533922?from=search&seid=12323212649418148578">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 Radio">
+                                <td>130418</td>
+                                <td><a href="https://v.qq.com/x/page/s0113hx841y.html">【中字】神童的深深打破</a></td>
+                                <td><a href="https://www.bilibili.com/video/av5324991?from=search&seid=14312741755612859155">B站</a></td>
+                                <td>电台</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130418</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNzQzMDM0NA==.html?rpid=71471910&resourceId=71471910_06_05_99">【中字】MNET WIDE</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=425931&uk=1310732488">资源</a></td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130418</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNzI1MzI0MA==.html?rpid=71471910">【打歌】MCD 第二次告白</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17533922?from=search&seid=12323212649418148578">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130417</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTg5MTcyMDQ4.html">【中字】无计划家族2 EP28 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130417</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTQ4ODkyMjM2.html">【中字】一周的偶像 （镒勋cut）</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=521120&uk=2818792225">资源</a></td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130417</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNzQyMjgwMA==.html?rpid=71471910&resourceId=71471910_06_05_99">【中字】SHOW CHAM TRUE BACK SHOW (第2部) </a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=425854&uk=1310732488">资源</a></td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130417</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNzQ5MDI0MA==.html?rpid=71471910">【中字】SHOW CHAM TRUE BACK SHOW (第1部) </a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=426380&uk=1310732488">资源</a></td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130417</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNzIzODc4NA==.html?rpid=71471910">【打歌】Show Champion 第二次告白</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130417</td>
+                                <td><a href="http://v.yinyuetai.com/video/645834">第二次告白 睡衣版</a></td>
+                                <td><a href="https://www.bilibili.com/video/av12308969/?p=8">B站</a></td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130414</td>
+                                <td>【打歌】人气歌谣 第二次告白</td>
+                                <td><a href="https://www.bilibili.com/video/av17533922?from=search&seid=12323212649418148578">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130414</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTc4MDcyNDQ0.html">【中字】 Arirang TV Pops in Seoul EP235 （PENIEL）</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 Radio">
+                                <td>130414</td>
+                                <td><a href="http://www.tudou.com/programs/view/ZGdkpk9isD8/?rpid=71471910">【中字】SJ Kiss The Radio（恩光、炫植）</a></td>
+                                <td>暂无</td>
+                                <td>电台</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=428350&uk=1310732488">资源</a></td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130413</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNjQ4MzE5Ng==.html?rpid=71471910">【打歌】音乐中心 G.NA Oops! Feat.镒勋</a></td>
+                                <td><a href="https://www.bilibili.com/video/av18004526?from=search&seid=11765814816057085948">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130413</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNjQ3MjA2OA==.html?rpid=71471910">【打歌】音乐中心 第二次告白</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17533922?from=search&seid=12323212649418148578">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130412</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNjM4NDU3Ng==.html?rpid=71471910">【中字】音乐银行 出演者待机室 BTOB</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=414753&uk=1310732488">资源</a></td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130412</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNjM3NzAwMA==.html?rpid=71471910">【打歌】音乐银行 第二次告白</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17533922?from=search&seid=12323212649418148578">B站</a></td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=414642&uk=1310732488">资源</a></td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130411</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNjI1MDU4OA==.html?rpid=71471910">【中字】WIDE 演艺NEWS BTOB-MCD Behind</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130411</td>
+                                <td>【打歌】MVD 第二次告白</td>
+                                <td><a href="https://www.bilibili.com/video/av17533922?from=search&seid=12323212649418148578">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130411</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNjIxMTI5Mg==.html?rpid=71471910">【打歌】MCD G.NA Oops! Feat.镒勋</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130410</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNjA5NTc0MA==.html?rpid=71471910">【打歌】Show Champion G.NA Oops! Feat.镒勋</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130410</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNjM1NTQ4OA==.html?rpid=71471910&resourceId=71471910_06_05_99">【中字】第二次告白 MV</a></td>
+                                <td><a href="https://www.bilibili.com/video/av12308969/?p=8">B站</a></td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130410</td>
+                                <td><a href="http://v.yinyuetai.com/video/642496">第二次告白 MV</a></td>
+                                <td><a href="https://www.bilibili.com/video/av21059071/?p=9">B站</a></td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130409</td>
+                                <td><a href="http://video.tudou.com/v/XMjIzMDIzODA5Ng==.html?rpid=71471910">【中字】无计划家族2 EP27 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130407</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNTc0NTM3Ng==.html?rpid=71471910">【打歌】人气歌谣 G.NA Oops! Feat.镒勋</a></td>
+                                <td><a href="https://www.bilibili.com/video/av18004526?from=search&seid=11765814816057085948">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 pub_performance">
+                                <td>130406</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTM4OTk2NDEy.html">Korea Music Wave in Bangkok - WOW </a></td>
+                                <td>暂无</td>
+                                <td>公演</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130406</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNTQ2NjEwNA==.html?rpid=71471910">【打歌】音乐中心 G.NA Oops! Feat.镒勋</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130404</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNTE1Mjg5Mg==.html">【打歌】MCD G.NA Oops! Feat.镒勋</a></td>
+                                <td><a href="https://www.bilibili.com/video/av18004526?from=search&seid=11765814816057085948">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130402</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyNDAxOTM0NA==.html?rpid=71471910">【中字】无计划家族2 EP26 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130401</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTc3MzM1NTMy.html">【中字】SBS 人气歌谣 交通Song  BTOB & G.NA </a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=1287260407&uk=4026733381">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130401</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTM4NjMxNDA0.html">【中字】Arirang TV Pops in Seoul(Peniel)</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=390970&uk=3072348124">资源</a></td>
+                            </tr>
+                        </div>
+                        <div class="month3">
+                            <tr class="13 music_stage">
+                                <td>130331</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNDU2NTkzNg==.html?rpid=71471910">【打歌】人气歌谣 G.NA Oops! Feat.镒勋</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130329</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNDQwODk5Ng==.html?rpid=71471910">音乐银行 特别MC在待机室 + G.NA Oops (feat.镒勋) + 一位安可</a></td>
+                                <td><a href="https://www.bilibili.com/video/av18004526?from=search&seid=11765814816057085948">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130327</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxNDE5MjYwMA==.html?bid=03&pid=02&resourceId=71471910_03_05_02">【中字】MNET WIDE STARCAM G.NA 镒勋CUT</a></td>
+                                <td><a href="https://www.bilibili.com/video/av12246369?from=search&seid=12751492312431626384">B站</a></td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=525251&uk=1109935724">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130326</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMTc4NTk0MA==.html?rpid=71471910">【中字】无计划家族2 EP25 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130324</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTMzNDk5Mjgw.html">KBS Love Request G.NA – Oops! (Ft. Il Hoon)</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130324</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxMzY5NjE0NA==.html?rpid=71471910">【打歌】人气歌谣 G.NA Oops! Feat.镒勋</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130323</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxMzU3OTU3Ng==.html?rpid=71471910">【中字】BTOB Behind Story：1周年纪念Bonus视频</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130323</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxMzUyNTI2NA==.html?rpid=71471910">【打歌】音乐中心 G.NA Oops! Feat.镒勋</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130322</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxMzQ3MTYzNg==.html?rpid=71471910">【打歌】音乐银行 G.NA Oops! Feat.镒勋</a></td>
+                                <td><a href="https://www.bilibili.com/video/av18004526?from=search&seid=11765814816057085948">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130321</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxMzMxNTE3Ng==.html?rpid=71471910">【打歌】MCD G.NA Oops! Feat.镒勋</a></td>
+                                <td><a href="https://www.bilibili.com/video/av18004526?from=search&seid=11765814816057085948">B站</a></td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130320</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTI5NjkxMjA0.html?spm=a2h0k.8191407.0.0&from=s1.8-1-1.2&f=17637472">【打歌】Show Champion G.NA Oops! Feat.镒勋</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130319</td>
+                                <td><a href="http://video.tudou.com/v/XMjIyMDM0MjU2NA==.html?rpid=71471910">【中字】无计划家族2 EP24 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 group_arts">
+                                <td>130318</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxMjk0NzQ4MA==.html?rpid=71471910">【中字】任炫植 sik's sense 第2季 番外篇2</a></td>
+                                <td><a href="https://www.bilibili.com/video/av16032162?from=search&seid=8080273517175524622">B站</a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130316</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxMjYwNDMyNA==.html?rpid=71471910">【打歌】音乐中心 G.NA Oops! Feat.镒勋</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130315</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxMjU0Njg1Mg==.html">【打歌】音乐银行 G.NA Oops! Feat.镒勋</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130314</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxMjQ5Njc4OA==.html">【中字】MNET WIDE open studio 镒勋CUT</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 music_stage">
+                                <td>130314</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTI2NzU0ODI4.html">【打歌】MCD G.NA Oops! Feat.镒勋</a></td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130314</td>
+                                <td><a href="http://v.yinyuetai.com/video/626481">G.NA Oops! Feat.镒勋</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130312</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTQyOTMzMjQ0.html">【中字】无计划家族2 EP23 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130305</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTM1NTc4MjQ4.html">【中字】无计划家族2 EP22 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130303</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTIzMzU3MzM2.html">【中字】BTOB 独占 Interview</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=499086&uk=1109935724">资源</a></td>
+                            </tr>
+                            <tr class="13 VLOG">
+                                <td>130302</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTIxMzQzMTYw.html">【中字】PENIEL VLOG2 星材参演</a></td>
+                                <td><a href="https://www.bilibili.com/video/av16828458">B站</a></td>
+                                <td>VLOG</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=363673&uk=1812179345">资源</a></td>
+                            </tr>
+                        </div>
+                        <div class="month2">
+                            <tr class="13 group_arts">
+                                <td>130229</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxOTU5MjIyNA==.html?bid=03&pid=02&resourceId=26960280_03_05_02">【中字】任炫植 sik's sense 第2季 特别篇</a></td>
+                                <td><a href="https://www.bilibili.com/video/av16032162?from=search&seid=8080273517175524622">B站</a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130227</td>
+                                <td><a href="http://video.tudou.com/v/XMjIxMDMzMzA1Mg==.html?bid=03&pid=02&resourceId=26960280_03_05_02">【中字】WOW MV 拍摄花絮</a></td>
+                                <td><a href="https://www.bilibili.com/video/av11268196?from=search&seid=604917861106672036">B站</a></td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130226</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTI3Mzg5OTgw.html">【中字】无计划家族2 EP21 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 group_arts">
+                                <td>130222</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTIyNTIyNTgw.html">【中字】任炫植 sik's sense 第2季 番外篇</a></td>
+                                <td><a href="https://www.bilibili.com/video/av16032162?from=search&seid=8080273517175524622">B站</a></td>
+                                <td>团综</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130219</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTIwNDQyMzQw.html">【中字】无计划家族2 EP20 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=361650&uk=1812179345">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130217</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTE4MTU0MDA4.html">【中字】三笨蛋 BTOB旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=294817&uk=1812179345">资源</a></td>
+                            </tr>
+                            <tr class="13 group_arts">
+                                <td>130213</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTIyNjI5NDQw.html">【中字】任炫植 sik's sense 第2季 E06</a></td>
+                                <td><a href="https://www.bilibili.com/video/av16032162?from=search&seid=8080273517175524622">B站</a></td>
+                                <td>团综</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=498485&uk=1109935724">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130212</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTE2MjI5MDg0.html">【中字】无计划家族2 EP19 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=282813&uk=3072348124">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130211</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTEzNzI1MDYw.html">【中字】MBC 偶像运动会 完整版</a></td>
+                                <td><a href="https://www.bilibili.com/video/av4043931?from=search&seid=4856862243290747096">B站</a></td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130205</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTE1OTgyNDI4.html">【中字】无计划家族2 EP18 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=275132&uk=1812179345">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130201</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTExNDk2NDI0.html">【中字】江南 Feel Dance 镒勋Cut</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=295162&uk=2064566493">资源</a></td>
+                            </tr>
+                        </div>
+                        <div class="month1">
+                            <tr class="13 official">
+                                <td>130131</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTA5Mjc2NjA0.html">【中字】秘密(Insane) MV 拍摄花絮</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=286587&uk=2064566493">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130129</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTEwMzQxMTQ0.html">【中字】无计划家族2 EP17 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=252716&uk=3072348124">资源</a></td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130128</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNzExODE4OA==.html?bid=03&pid=02&resourceId=26960280_03_05_02">BTOB DEBUT & HISTORY DVD 日版 ⑩⑤ Insane 郑镒勋个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130128</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNjk3Mzk0MA==.html?bid=03&pid=02&resourceId=26960280_03_05_02">BTOB DEBUT & HISTORY DVD 日版 ⑩④ Insane 任炫植个人版 </a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130127</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNjkyMDg1Ng==.html">【中字】The Romantic & Idol 第二季 EP12 （旼赫）</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17129029?from=search&seid=15281270980608447242">B站</a></td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130127</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNjgxNDg0OA==.html">BTOB DEBUT & HISTORY DVD 日版 ⑩③ Insane 陆星材 个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130127</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNjY1NTI0OA==.html">BTOB DEBUT & HISTORY DVD 日版 ⑩② 夺走那嘴唇 舞蹈版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130125</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNjU0NjEwMA==.html">BTOB DEBUT & HISTORY DVD 日版 ⑩① Insane 李旼赫个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130125</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNjUzMDk0MA==.html">BTOB DEBUT & HISTORY DVD 日版 ⑩ Insane 李昌燮个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130124</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTA2OTQwNzIw.html">【中字】STAR直击 BTOB EP2</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=228462&uk=3072348124">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130123</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTA2MDQ2NTcy.html">【中字】Kpop Starhunt2 EP9 BTOB Cut </a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=274829&uk=2064566493">资源</a></td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130123</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNjI2NTk2OA==.html?bid=03&pid=02&resourceId=26960280_03_05_02">BTOB DEBUT & HISTORY DVD 日版 ⑧ WOW Peniel个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130123</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNjI1ODQzMg==.html?bid=03&pid=02&resourceId=26960280_03_05_02">BTOB DEBUT & HISTORY DVD 日版 ⑧ Insane Peniel个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130123</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNjIzNjE2MA==.html?bid=03&pid=02&resourceId=26960280_03_05_02">BTOB DEBUT & HISTORY DVD 日版 ⑦ WOW 李旼赫个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130122</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTA5OTU0OTc2.html">【中字】无计划家族2 EP16 旼赫 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=289637&uk=2064566493">资源</a></td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130122</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTA1MTQxOTQ0.html">【中字】夺走那嘴唇MV 拍摄花絮</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=272138&uk=2064566493">资源</a></td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130121</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNTk2NzU3Ng==.html?bid=03&pid=02&resourceId=26960280_03_05_02">BTOB DEBUT & HISTORY DVD 日版 ⑥ Insane 徐恩光个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130121</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNTkzODg4MA==.html?bid=03&pid=02&resourceId=26960280_03_05_02">BTOB DEBUT & HISTORY DVD 日版 ④ WOW 徐恩光个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130121</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNTkzNzYwNA==.html?bid=03&pid=02&resourceId=26960280_03_05_02">BTOB DEBUT & HISTORY DVD 日版 ④ WOW 李昌燮个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130120</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNTk2NDk4OA==.html">【中字】The Romantic & Idol 第二季 EP11 （旼赫）</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17129029?from=search&seid=15281270980608447242">B站</a></td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130120</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNTgyMDQwOA==.html?bid=03&pid=02&resourceId=26960280_03_05_02">BTOB DEBUT & HISTORY DVD 日版 ③ WOW 陆星材个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130119</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTM5ODM5MTg4.html?spm=a2h0k.8191407.0.0">【中字】食神之路 E113 完整版</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130119</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNTc0ODYyNA==.html?bid=03&pid=02&resourceId=26960280_03_05_02">BTOB DEBUT & HISTORY DVD 日版 ② WOW 任炫植个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130118</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTA0Mzg1MjYw.html">【中字】Feel dance EP01 BTOB 镒勋 CUT</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 official">
+                                <td>130118</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNTYwMjI5Mg==.html?bid=03&pid=02&resourceId=26960280_03_05_02">BTOB DEBUT & HISTORY DVD 日版 ① WOW 郑镒勋个人版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130117</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTAzODU3MjQw.html">【中字】STAR直击 BTOB Cut </a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=220045&uk=3072348124">资源</a></td>
+                            </tr>
+                            <tr class="13 tv_station">
+                                <td>130113</td>
+                                <td><a href="http://video.tudou.com/v/XMjIwNTAwMjYyOA==.html">【中字】The Romantic & Idol 第二季 EP3 （旼赫）</a></td>
+                                <td><a href="https://www.bilibili.com/video/av17129029?from=search&seid=15281270980608447242">B站</a></td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="13 group_arts">
+                                <td>130104</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTAzMzkwNjUy.html">【中字】任炫植 sik's sense 第2季 EP5</a></td>
+                                <td><a href="https://www.bilibili.com/video/av16032162?from=search&seid=8080273517175524622">B站</a></td>
+                                <td>团综</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=260674&uk=2064566493">资源</a></td>
+                            </tr>
+                            <tr class="13 group_arts">
+                                <td>130101</td>
+                                <td><a href="http://v.youku.com/v_show/id_XNTI2MzExNjA4.html">【中字】B+ DIARY EP5</a></td>
+                                <td><a href="https://www.bilibili.com/video/av16322613?from=search&seid=17858840030187461028">B站</a></td>
+                                <td>团综</td>
+                                <td><a href="https://pan.baidu.com/share/link?shareid=297565&uk=303142800">资源</a></td>
+                            </tr>
+                        </div>
                     </div>
                     <!-- 2013 end -->
 
                     <!-- 2014 -->
                     <div id="2014">
-
+                        <!-- 12月 -->
+                        <div class="month12"></div>
+                        <!-- 11月 -->
+                        <div class="month11"></div>
+                        <!-- 10月 -->
+                        <div class="month10"></div>
+                        <!-- 9月 -->
+                        <div class="month9"></div>
+                        <!-- 8月 -->
+                        <div class="month8"></div>
+                        <!-- 7月 -->
+                        <div class="month7"></div>
+                        <!-- 6月 -->
+                        <div class="month6"></div>
+                        <!-- 5月 -->
+                        <div class="month5"></div>
+                        <!-- 4月 -->
+                        <div class="month4"></div>
+                        <!-- 3月 -->
+                        <div class="month3"></div>
+                        <!-- 2月 -->
+                        <div class="month2"></div>
+                        <!-- 1月 -->
+                        <div class="month1"></div>
                     </div>
                     <!-- 2014 end -->
 
                     <!-- 2015 -->
                     <div id="2015">
-
+                        <!-- 12月 -->
+                        <div class="month12"></div>
+                        <!-- 11月 -->
+                        <div class="month11"></div>
+                        <!-- 10月 -->
+                        <div class="month10"></div>
+                        <!-- 9月 -->
+                        <div class="month9"></div>
+                        <!-- 8月 -->
+                        <div class="month8"></div>
+                        <!-- 7月 -->
+                        <div class="month7"></div>
+                        <!-- 6月 -->
+                        <div class="month6"></div>
+                        <!-- 5月 -->
+                        <div class="month5"></div>
+                        <!-- 4月 -->
+                        <div class="month4"></div>
+                        <!-- 3月 -->
+                        <div class="month3"></div>
+                        <!-- 2月 -->
+                        <div class="month2"></div>
+                        <!-- 1月 -->
+                        <div class="month1"></div>
                     </div>
                     <!-- 2015 end -->
 
                     <!-- 2016-->
                     <div id="2015">
-
+                        <!-- 12月 -->
+                        <div class="month12"></div>
+                        <!-- 11月 -->
+                        <div class="month11"></div>
+                        <!-- 10月 -->
+                        <div class="month10"></div>
+                        <!-- 9月 -->
+                        <div class="month9"></div>
+                        <!-- 8月 -->
+                        <div class="month8"></div>
+                        <!-- 7月 -->
+                        <div class="month7"></div>
+                        <!-- 6月 -->
+                        <div class="month6"></div>
+                        <!-- 5月 -->
+                        <div class="month5"></div>
+                        <!-- 4月 -->
+                        <div class="month4"></div>
+                        <!-- 3月 -->
+                        <div class="month3"></div>
+                        <!-- 2月 -->
+                        <div class="month2"></div>
+                        <!-- 1月 -->
+                        <div class="month1">
+                            <tr class="16 tv_station">
+                                <td>160130</td>
+                                <td><a href="http://t.cn/RbrvjZn">【中字】我们结婚了</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td style="">暂无</td>
+                            </tr>
+                            <tr class="16 group_arts">
+                                <td>160130</td>
+                                <td><a href="http://video.tudou.com/v/XMjQzMzQ3MDQ0MA==.html?bid=03&pid=02&resourceId=71471910_03_0_02">【中字】BTOB The Real 02</a></td>
+                                <td>暂无</td>
+                                <td>团综</td>
+                                <td><a href="https://pan.baidu.com/s/1bnPFI15">资源</a></td>
+                            </tr>
+                            <tr class="16 group_arts">
+                                <td>160128</td>
+                                <td><a href="http://video.tudou.com/v/XMjQzMzA5MjI0NA==.html?bid=03&pid=02&resourceId=71471910_03_0_02">【中字】hotzil BTOB企划物 第05话 </a></td>
+                                <td><a href="https://www.bilibili.com/video/av14541114/?p=5">B站</a></td>
+                                <td>团综</td>
+                                <td><a href="https://pan.baidu.com/s/1nuqyGq9">资源</a></td>
+                            </tr>
+                            <tr class="16 tv_station">
+                                <td>160122</td>
+                                <td><a href="http://t.cn/Rb8k5gG">【中字】我们结婚了</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="16 official">
+                                <td>160122</td>
+                                <td><a href="http://video.tudou.com/v/XMjQzMjE1NjE0MA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】BTOB二期官方FAN MEETING Message</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td><a href="https://pan.baidu.com/s/1kU09ExL">资源</a></td>
+                            </tr>
+                            <tr class="16 official">
+                                <td>160122</td>
+                                <td><a href="http://video.tudou.com/v/XMjQzMjE0NjQzNg==.html?bid=03&pid=02&resourceId=71471910_03_0_02">【中字】BTOB的『Dear Bride』发售Message</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td><a href="https://pan.baidu.com/s/1ntPXQdz">资源</a></td>
+                            </tr>
+                            <tr class="16 news">
+                                <td>160121</td>
+                                <td><a href="http://video.tudou.com/v/XMjQzMjE3NjI4MA==.html?bid=03&pid=02&resourceId=71471910_03_0_02">【中字】金唱片后台BTOB采访</a></td>
+                                <td><a href="https://www.bilibili.com/video/av5748900/?p=2">B站</a></td>
+                                <td>新闻</td>
+                                <td><a href="https://pan.baidu.com/s/1mheSWK4">资源</a></td>
+                            </tr>
+                            <tr class="16 group_arts">
+                                <td>160121</td>
+                                <td><a href="http://video.tudou.com/v/XMjQzMTk5NjczNg==.html?bid=03&pid=02&resourceId=71471910_03_0_02">【中字】hotzil BTOB企划物 第04话 </a></td>
+                                <td><a href="https://www.bilibili.com/video/av14541114/?p=4">B站</a></td>
+                                <td>团综</td>
+                                <td><a href="https://pan.baidu.com/s/1mhtLGi0">资源</a></td>
+                            </tr>
+                            <tr class="16 music_stage">
+                                <td>160121</td>
+                                <td><a href="http://t.cn/RbHmxDn">【中字】金唱片best vocal group获奖</a></td>
+                                <td><a href="https://www.bilibili.com/video/av5748900?from=search&seid=3777295977127740961">B站</a></td>
+                                <td>音放</td>
+                                <td><a href="http://t.cn/R4R4bWt">资源</a>(c2yy)</td>
+                            </tr>
+                            <tr class="16 music_stage">
+                                <td>160121</td>
+                                <td><a href="http://www.vlive.tv/video/5057?channelCode=FD737">第30届金唱片 btovixx 你所有的瞬间＆少女＆My Everything</a></td>
+                                <td><a href="https://www.bilibili.com/video/av5748900?from=search&seid=3777295977127740961">B站</a></td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/s/1jHxn8UU#list/path=%2F">资源</a>(xd2t)</td>
+                            </tr>
+                            <tr class="16 music_stage">
+                                <td>160121</td>
+                                <td><a href="http://www.vlive.tv/video/5044?channelCode=FD737">第30届金唱片 回家的路</a></td>
+                                <td><a href="https://www.bilibili.com/video/av5748900?from=search&seid=3777295977127740961">B站</a></td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/s/1jHxn8UU#list/path=%2F">资源</a>(xd2t)</td>
+                            </tr>
+                            <tr class="16 music_stage">
+                                <td>160121</td>
+                                <td><a href="http://www.vlive.tv/video/5045?channelCode=FD737">第30届金唱片 没关系</a></td>
+                                <td><a href="https://www.bilibili.com/video/av5748900?from=search&seid=3777295977127740961">B站</a></td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/s/1jHxn8UU#list/path=%2F">资源</a>(xd2t)</td>
+                            </tr>
+                            <tr class="16 official">
+                                <td>160119</td>
+                                <td><a href="http://www.vlive.tv/video/4907?channelCode=FD737">【中字】BTOB繁忙的12月末 behind</a></td>
+                                <td><a href="https://www.bilibili.com/video/av3621382?from=search&seid=8198056953884216668">B站</a></td>
+                                <td>官方</td>
+                                <td><a href="https://pan.baidu.com/s/1qX42iJE">资源</a></td>
+                            </tr>
+                            <tr class="16 tv_station">
+                                <td>160116</td>
+                                <td><a href="http://t.cn/R4jRtgZ">【中字】我们结婚了</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="16 tv_station">
+                                <td>160115</td>
+                                <td><a href="http://t.cn/R4j891S">【中字】能力者们 （星材）</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="16 group_arts">
+                                <td>160115</td>
+                                <td><a href="http://video.tudou.com/v/XMjQzMTA1MTAxNg==.html?bid=03&pid=02&resourceId=71471910_03_0_02">【中字】hotzil BTOB企划物 第03话</a></td>
+                                <td><a href="https://www.bilibili.com/video/av14541114/?p=3">B站</a></td>
+                                <td>团综</td>
+                                <td><a href="https://pan.baidu.com/s/1kUzkQ6V">资源</a></td>
+                            </tr>
+                            <tr class="16 tv_station">
+                                <td>160114</td>
+                                <td>【中字】甜蜜阴森家族 E16（完） （旼赫）</td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/s/1kTxsBll#list/path=%2F">资源</a>(pwmi)</td>
+                            </tr>
+                            <tr class="16 music_stage">
+                                <td>160114</td>
+                                <td><a href="http://t.cn/R4OkEDK">【中字】首尔歌谣大赏 抒情曲奖BTOB </a></td>
+                                <td><a href="https://www.bilibili.com/video/av3585316?from=search&seid=1043626502973385845">B站</a></td>
+                                <td>音放</td>
+                                <td><a href="http://t.cn/R4OkEst">资源</a>(6w2q)</td>
+                            </tr>
+                            <tr class="16 music_stage">
+                                <td>160114</td>
+                                <td>首尔歌谣大赏 没关系</td>
+                                <td>暂无</td>
+                                <td>音放</td>
+                                <td><a href="https://pan.baidu.com/s/1c1yJc0C#list/path=%2F">资源</a>(i2gz)</td>
+                            </tr>
+                            <tr class="16 tv_station">
+                                <td>160113</td>
+                                <td><a href="http://t.cn/RbdvHku">【中字】蒙面歌王 （星材嘉宾）</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="16 Radio">
+                                <td>160113</td>
+                                <td><a href="http://video.tudou.com/v/XMjQzMzA2MDEwOA==.html?bid=03&pid=02&resourceId=71471910_03_0_02">【中字】李国珠的Young Street BTOB</a></td>
+                                <td><a href="https://www.bilibili.com/video/av5324991/?p=34">B站</a></td>
+                                <td>电台</td>
+                                <td><a href="https://pan.baidu.com/s/1nu08cx7">资源</a></td>
+                            </tr>
+                            <tr class="16 tv_station">
+                                <td>160110</td>
+                                <td><a href="http://video.tudou.com/v/XMjQzNDY1MzE5Ng==.html?bid=03&pid=02&resourceId=71471910_03_0_02">【英字】K-POP PLANET BTOB 炫植 CAM</a></td>
+                                <td>暂无</td>
+                                <td>放送</td>
+                                <td><a href="https://pan.baidu.com/s/1sjRZSCX">资源</a></td>
+                            </tr>
+                            <tr class="16 other">
+                                <td>160108</td>
+                                <td>全州ICONFACTORY 四周年BTOB祝贺视频</td>
+                                <td>暂无</td>
+                                <td>其他</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="16 group_arts">
+                                <td>160108</td>
+                                <td><a href="http://video.tudou.com/v/XMjQyOTkxNzQ1Mg==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】hotzil BTOB企划物 第02话</a></td>
+                                <td><a href="https://www.bilibili.com/video/av14541114/?p=2">B站</a></td>
+                                <td>团综</td>
+                                <td><a href="https://pan.baidu.com/s/1bwI5eY">资源</a></td>
+                            </tr>
+                            <tr class="16 group_arts">
+                                <td>160107</td>
+                                <td><a href="http://video.tudou.com/v/XMjQyOTc1NjIyOA==.html?bid=03&pid=02&resourceId=71471910_03_0_02">【中字】hotzil BTOB企划物 第01话</a></td>
+                                <td><a href="https://www.bilibili.com/video/av14541114?from=search&seid=11116033003715429831">B站</a></td>
+                                <td>团综</td>
+                                <td><a href="https://pan.baidu.com/s/1jHcOUpg">资源</a></td>
+                            </tr>
+                            <tr class="16 official">
+                                <td>160106</td>
+                                <td><a href="http://www.vlive.tv/video/4548?channelCode=FD737">【中字】BTOB 大阪演唱会behind</a></td>
+                                <td><a href="https://www.bilibili.com/video/av3535444?from=search&seid=14148613591032285514">B站</a></td>
+                                <td>官方</td>
+                                <td><a href="https://pan.baidu.com/s/1nu1Lqyt">资源</a></td>
+                            </tr>
+                            <tr class="16 magazine">
+                                <td>160105</td>
+                                <td><a href="http://video.tudou.com/v/XMjQyOTQyNDExNg==.html?bid=03&pid=02&resourceId=71471910_03_0_02">【中字】haru*hana vol.33 BTOB 拍摄花絮</a></td>
+                                <td>暂无</td>
+                                <td>杂志</td>
+                                <td><a href="https://pan.baidu.com/s/1gdQJdPT">资源</a></td>
+                            </tr>
+                            <tr class="16 Radio">
+                                <td>160104</td>
+                                <td><a href="http://video.tudou.com/v/XMjQzMDA3MjY4NA==.html?bid=03&pid=02&resourceId=71471910_03_0_02">【中字】sukira BTOB恩光&昌燮 乱吵讨论</a></td>
+                                <td><a href="https://www.bilibili.com/video/av5324991/?p=33">B站</a></td>
+                                <td>电台</td>
+                                <td><a href="https://pan.baidu.com/s/1bpr3pc">资源</a></td>
+                            </tr>
+                            <tr class="16 official">
+                                <td>160104</td>
+                                <td>BTOB CUBE TV 新年问候视频</td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="16 news">
+                                <td>160103</td>
+                                <td>BTOB Interview with Kavenyou</td>
+                                <td>暂无</td>
+                                <td>新闻</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="16 tv_station">
+                                <td>160102</td>
+                                <td>【中字】我们结婚了</td>
+                                <td><a href="https://www.bilibili.com/video/av3515587?from=search&seid=4762989188687126193">B站</a></td>
+                                <td>放送</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="16 official">
+                                <td>160102</td>
+                                <td><a href="http://video.tudou.com/v/XMjQyODkzNTU2MA==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】因为是BTOB，所以没关系迷你LIVE 后台花絮</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td><a href="https://pan.baidu.com/s/1c1xsaw4">资源</a></td>
+                            </tr>
+                            <tr class="16 other">
+                                <td>160101</td>
+                                <td>blackyak 陆星材 新年问候</td>
+                                <td>暂无</td>
+                                <td>其他</td>
+                                <td>暂无</td>
+                            </tr>
+                            <tr class="16 official">
+                                <td>160101</td>
+                                <td><a href="http://video.tudou.com/v/XMjQyODY3NTQ1Ng==.html?bid=03&pid=2&resourceId=71471910_03_05_02">【中字】BTOB 新年问候 日语版</a></td>
+                                <td>暂无</td>
+                                <td>官方</td>
+                                <td><a href="https://pan.baidu.com/s/1sk5Ei53">资源</a></td>
+                            </tr>
+                        </div>
                     </div>
                     <!-- 2015 end -->
 
                     <!-- 2017 -->
                     <div id="2017">
-
+                        <!-- 12月 -->
+                        <div class="month12"></div>
+                        <!-- 11月 -->
+                        <div class="month11"></div>
+                        <!-- 10月 -->
+                        <div class="month10"></div>
+                        <!-- 9月 -->
+                        <div class="month9"></div>
+                        <!-- 8月 -->
+                        <div class="month8"></div>
+                        <!-- 7月 -->
+                        <div class="month7"></div>
+                        <!-- 6月 -->
+                        <div class="month6"></div>
+                        <!-- 5月 -->
+                        <div class="month5"></div>
+                        <!-- 4月 -->
+                        <div class="month4"></div>
+                        <!-- 3月 -->
+                        <div class="month3"></div>
+                        <!-- 2月 -->
+                        <div class="month2"></div>
+                        <!-- 1月 -->
+                        <div class="month1"></div>
                     </div>
                     <!-- 2017 end -->
 
                     <!-- 2018 -->
                     <div id="2018">
-
+                        <!-- 4月 -->
+                        <div class="month4"></div>
+                        <!-- 3月 -->
+                        <div class="month3"></div>
+                        <!-- 2月 -->
+                        <div class="month2"></div>
+                        <!-- 1月 -->
+                        <div class="month1"></div>
                     </div>
                     <!-- 2018 end -->
 
