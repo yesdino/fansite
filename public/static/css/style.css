@@ -1,0 +1,114 @@
+body {
+            padding-top: 80px;
+            /* background-color:red; */
+        }
+
+        /*
+ .navbar-default .navbar-nav>li>a, .navbar-header, .container-fluid, .dropdown-menu li a { color: white; background-color: cornflowerblue; } .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus { color: cornflowerblue; background-color: transparent; }
+*/
+
+        /*
+ .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { color: blue; background-color: green; }
+*/
+
+        /*
+ #mon_selet a, #mon_selet a:hover, #mon_selet a:visited, #mon_selet a :focus { display: block; margin-bottom: 30px; color: #777777; }
+*/
+
+        .official {
+            background-color: rgb(250, 236, 236)
+        }
+
+
+        .Radio {
+            background-color: rgb(252, 247, 191)
+        }
+
+        .music_stage {
+            background-color: rgb(231, 248, 235)
+        }
+
+        .group_arts {
+            background-color: rgb(201, 245, 255)
+        }
+
+        .teleplay {
+            background-color: #CCFF99;
+        }
+
+        .VLOG {
+            background-color: #d4fab4;
+        }
+
+        .pub_performance {
+            background-color: #FFCC99;
+        }
+
+        .news {
+            background-color: #cdcfff;
+        }
+
+        .magazine {
+            background-color: #FFFF66;
+        }
+
+        .tv_station {
+            background-color: aliceblue;
+        }
+
+        .FM {
+            background-color: #fdc4ff;
+        }
+
+        .concert {
+            background-color: #bbedff;
+        }
+
+        .other {
+            background-color: #ebd7f4;
+        }
+
+        .cf {
+            background-color: #b6ff6c;
+        }
+
+        #TABLE {
+            width: 98%;
+            margin: 0 auto;
+            border: 1px solid #D6D8DD;
+            border-radius: 10px;
+        }
+
+
+
+        #TABLE table tr :nth-child(1),
+        #TABLE table tr :nth-child(3),
+        #TABLE table tr :nth-child(4),
+        #TABLE table tr :nth-child(5) {
+            padding-right: 0;
+            padding-left: 0;
+            margin-right: 0;
+            margin-left: 0;
+            text-align: center;
+            /*            vertical-align: baseline;*/
+        }
+
+        #TABLE table tr :nth-child(1) {
+            /*            background-color: #ffd4a1;*/
+            width: 14%;
+        }
+
+        #TABLE table tr :nth-child(3) {
+            /*            background-color: #a1e9ff;*/
+            width: 12%;
+        }
+
+        #TABLE table tr :nth-child(4) {
+            /*            background-color: #a8a1ff;*/
+            width: 10%;
+        }
+
+        #TABLE table tr :nth-child(5) {
+            /*            background-color: aqua;*/
+            width: 15%;
+        }
