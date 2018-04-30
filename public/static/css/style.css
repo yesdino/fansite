@@ -83,11 +83,21 @@ body {
     background-color: #ebd7f4;
 }
 
+
+
 #TABLE {
-    width: 98%;
-    margin: 0 auto;
     border: 1px solid #D6D8DD;
     border-radius: 10px;
+    width: 98%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#TABLE table {
+    width: 100%;
+    /*    margin: 0 auto;*/
+    /*    border: 1px solid #D6D8DD;*/
+    /*    border: 1px solid #3971fd;*/
 }
 
 
@@ -101,25 +111,44 @@ body {
     margin-right: 0;
     margin-left: 0;
     text-align: center;
+    overflow: hidden;
     /*            vertical-align: baseline;*/
 }
+
+/*B站*/
+
+#TABLE table tr :nth-child(3) {
+    background-color: #a1e9ff;
+    width: 20%;
+}
+
+/*日期*/
 
 #TABLE table tr :nth-child(1) {
     /*            background-color: #ffd4a1;*/
     width: 15%;
 }
 
-#TABLE table tr :nth-child(3) {
-    /*            background-color: #a1e9ff;*/
-    width: 12%;
-}
 
-#TABLE table tr :nth-child(4) {
-    /*            background-color: #a8a1ff;*/
-    width: 10%;
-}
+
+/*资源*/
 
 #TABLE table tr :nth-child(5) {
-    /*            background-color: aqua;*/
+    width: 12%;
+    /*    background-color: aqua;*/
+    overflow: hidden;
+}
+
+/*分类*/
+
+#TABLE table tr :nth-child(4) {
+    background-color: #a8a1ff;
     width: 15%;
+}
+
+/*手机*/
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    width: 50px;
+    background-color: #fa979a;
 }
