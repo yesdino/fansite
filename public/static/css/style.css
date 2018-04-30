@@ -94,7 +94,7 @@ body {
 }
 
 #TABLE table {
-    width: 100%;
+    /*    width: 100%;*/
     /*    margin: 0 auto;*/
     /*    border: 1px solid #D6D8DD;*/
     /*    border: 1px solid #3971fd;*/
@@ -115,21 +115,26 @@ body {
     /*            vertical-align: baseline;*/
 }
 
-/*B站*/
-
-#TABLE table tr :nth-child(3) {
-    background-color: #a1e9ff;
-    width: 20%;
-}
-
 /*日期*/
 
 #TABLE table tr :nth-child(1) {
     /*            background-color: #ffd4a1;*/
-    width: 15%;
+    width: 14%;
 }
 
+/*B站*/
 
+#TABLE table tr :nth-child(3) {
+    /*    background-color: #a1e9ff;*/
+    width: 11%;
+}
+
+/*分类*/
+
+#TABLE table tr :nth-child(4) {
+    /*    background-color: #a8a1ff;*/
+    width: 12%;
+}
 
 /*资源*/
 
@@ -139,12 +144,7 @@ body {
     overflow: hidden;
 }
 
-/*分类*/
 
-#TABLE table tr :nth-child(4) {
-    background-color: #a8a1ff;
-    width: 15%;
-}
 
 /*手机*/
 
