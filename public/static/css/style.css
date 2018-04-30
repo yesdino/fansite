@@ -94,6 +94,8 @@ body {
 }
 
 #TABLE table {
+    /* 表格宽度不随内容变化 而是使用指定宽度 即指定宽度不为最小宽度为最大宽度*/
+    table-layout: fixed;
     /*    width: 100%;*/
     /*    margin: 0 auto;*/
     /*    border: 1px solid #D6D8DD;*/
@@ -112,6 +114,8 @@ body {
     margin-left: 0;
     text-align: center;
     overflow: hidden;
+
+    /*    white-space: pre-line;*/
     /*            vertical-align: baseline;*/
 }
 
@@ -119,27 +123,36 @@ body {
 
 #TABLE table tr :nth-child(1) {
     /*            background-color: #ffd4a1;*/
+    /*断行 即使是单词也断*/
+    word-break: break-all;
     width: 14%;
+}
+
+/*在线*/
+
+#TABLE table tr :nth-child(2) {
+    word-break: break-all;
+    width: 51%;
 }
 
 /*B站*/
 
 #TABLE table tr :nth-child(3) {
     /*    background-color: #a1e9ff;*/
-    width: 11%;
+    /*    width: 11%;*/
 }
 
 /*分类*/
 
 #TABLE table tr :nth-child(4) {
     /*    background-color: #a8a1ff;*/
-    width: 12%;
+    /*    width: 12%;*/
 }
 
 /*资源*/
 
 #TABLE table tr :nth-child(5) {
-    width: 12%;
+    width: 11%;
     /*    background-color: aqua;*/
     overflow: hidden;
 }
