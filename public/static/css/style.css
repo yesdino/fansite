@@ -1,114 +1,125 @@
 body {
-            padding-top: 80px;
-            /* background-color:red; */
-        }
+    padding-top: 80px;
+    /* background-color:red; */
+}
 
-        /*
+/*
  .navbar-default .navbar-nav>li>a, .navbar-header, .container-fluid, .dropdown-menu li a { color: white; background-color: cornflowerblue; } .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus { color: cornflowerblue; background-color: transparent; }
 */
 
-        /*
+/*
  .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { color: blue; background-color: green; }
 */
 
-        /*
+/*
  #mon_selet a, #mon_selet a:hover, #mon_selet a:visited, #mon_selet a :focus { display: block; margin-bottom: 30px; color: #777777; }
 */
 
-        .official {
-            background-color: rgb(250, 236, 236)
-        }
+.official {
+    /*官方*/
+    background-color: rgb(250, 236, 236)
+}
+
+.music_stage {
+    /*音放*/
+    background-color: rgb(217, 251, 255)
+}
+
+.Radio {
+    /*电台*/
+    background-color: rgb(255, 249, 185)
+}
 
 
-        .Radio {
-            background-color: rgb(252, 247, 191)
-        }
+.group_arts {
+    /*团综*/
+    background-color: rgb(201, 245, 255)
+}
 
-        .music_stage {
-            background-color: rgb(231, 248, 235)
-        }
+.tv_station {
+    /*放送*/
+    background-color: aliceblue;
+}
 
-        .group_arts {
-            background-color: rgb(201, 245, 255)
-        }
+.news {
+    /*新闻*/
+    background-color: #cdcfff;
+}
 
-        .teleplay {
-            background-color: #CCFF99;
-        }
+.pub_performance {
+    /*公演*/
+    background-color: #FFCC99;
+}
 
-        .VLOG {
-            background-color: #d4fab4;
-        }
+.magazine,
+.cf {
+    /* 画报 & 广告 */
+    background-color: #ffff7f;
+}
 
-        .pub_performance {
-            background-color: #FFCC99;
-        }
+.VLOG {
+    /*VLOG*/
+    background-color: #d4fab4;
+}
 
-        .news {
-            background-color: #cdcfff;
-        }
+.concert,
+.FM {
+    /*演唱会 FM */
+    background-color: #bbedff;
+}
 
-        .magazine {
-            background-color: #FFFF66;
-        }
+.live {
+    /*直播*/
+    background-color: #ffe3c4;
+}
 
-        .tv_station {
-            background-color: aliceblue;
-        }
+.teleplay {
+    /*电视剧*/
+    background-color: #ffcefa;
+}
 
-        .FM {
-            background-color: #fdc4ff;
-        }
+.other {
+    /*其他*/
+    background-color: #ebd7f4;
+}
 
-        .concert {
-            background-color: #bbedff;
-        }
-
-        .other {
-            background-color: #ebd7f4;
-        }
-
-        .cf {
-            background-color: #b6ff6c;
-        }
-
-        #TABLE {
-            width: 98%;
-            margin: 0 auto;
-            border: 1px solid #D6D8DD;
-            border-radius: 10px;
-        }
-
+#TABLE {
+    width: 98%;
+    margin: 0 auto;
+    border: 1px solid #D6D8DD;
+    border-radius: 10px;
+}
 
 
-        #TABLE table tr :nth-child(1),
-        #TABLE table tr :nth-child(3),
-        #TABLE table tr :nth-child(4),
-        #TABLE table tr :nth-child(5) {
-            padding-right: 0;
-            padding-left: 0;
-            margin-right: 0;
-            margin-left: 0;
-            text-align: center;
-            /*            vertical-align: baseline;*/
-        }
 
-        #TABLE table tr :nth-child(1) {
-            /*            background-color: #ffd4a1;*/
-            width: 14%;
-        }
+#TABLE table tr :nth-child(1),
+#TABLE table tr :nth-child(3),
+#TABLE table tr :nth-child(4),
+#TABLE table tr :nth-child(5) {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+    /*            vertical-align: baseline;*/
+}
 
-        #TABLE table tr :nth-child(3) {
-            /*            background-color: #a1e9ff;*/
-            width: 12%;
-        }
+#TABLE table tr :nth-child(1) {
+    /*            background-color: #ffd4a1;*/
+    width: 15%;
+}
 
-        #TABLE table tr :nth-child(4) {
-            /*            background-color: #a8a1ff;*/
-            width: 10%;
-        }
+#TABLE table tr :nth-child(3) {
+    /*            background-color: #a1e9ff;*/
+    width: 12%;
+}
 
-        #TABLE table tr :nth-child(5) {
-            /*            background-color: aqua;*/
-            width: 15%;
-        }
+#TABLE table tr :nth-child(4) {
+    /*            background-color: #a8a1ff;*/
+    width: 10%;
+}
+
+#TABLE table tr :nth-child(5) {
+    /*            background-color: aqua;*/
+    width: 15%;
+}
