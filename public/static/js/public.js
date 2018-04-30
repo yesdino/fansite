@@ -1,6 +1,6 @@
 $(document).ready(function () {
     //$("#2012").show();
-    $("#TABLE table tbody tr").not(".16").each(function () {
+    $("#TABLE table tbody tr").not(".18").each(function () {
         $(this).hide();
     });
 
