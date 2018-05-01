@@ -27,7 +27,7 @@ body {
 
 .Radio {
     /*电台*/
-    background-color: rgb(255, 249, 185)
+    background-color: rgb(255, 250, 200)
 }
 
 
@@ -54,7 +54,7 @@ body {
 .magazine,
 .cf {
     /* 画报 & 广告 */
-    background-color: #ffff7f;
+    background-color: #ffff9c;
 }
 
 .VLOG {
