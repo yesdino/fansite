@@ -526,6 +526,120 @@ $(document).ready(function () {
         });
     })
 
-    //---------- month select ------------
-    //            var mon6_top = $("#month6").offset().top; // var mon7_top = $("#month7").offset().top; // $("#MON6").click(function() { // $("html, body").animate({ // scrollTop: mon6_top // }, { // duration: 500, // easing: "swing" // }); // //return false; // }); // $("#MON7").click(function() { // $("html, body").animate({ // scrollTop: mon7_top // }, { // duration: 500, // easing: "swing" // }); // //return false; // });
+
+    //---------------- 2018 --------------
+    $("#nav_18_all").click(function () {
+        $(".18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".18").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_18_official").click(function () {
+        $(".official.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".official.18").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_18_dage").click(function () {
+        $(".music_stage.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".music_stage.18").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_18_Radio").click(function () {
+        $(".Radio.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".Radio.18").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_18_group_arts").click(function () { //团综
+        $(".group_arts.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".group_arts.18").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_18_tv_station").click(function () { //放送
+        $(".tv_station.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".tv_station.18").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_18_news").click(function () { //新闻
+        $(".news.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".news.18").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_18_VLOG").click(function () { //VLOG
+        $(".VLOG.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".VLOG.18").each(function () {
+            $(this).hide();
+        });
+    })
+
+    $("#nav_18_pub_performance").click(function () { //公演 & FM 
+        $(".pub_performance.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".pub_performance.18").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_18_magazine_cf").click(function () { //画报 & cf
+        $(".magazine.18,.cf.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".magazine.18,.cf.18").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_18_concert_FM").click(function () { //演唱会
+        $(".concert.18,.FM.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".concert.18,.FM.18").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_18_live").click(function () { //直播
+        $(".live.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".live.18").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_18_teleplay").click(function () { //电视剧
+        $(".teleplay.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".teleplay.18").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_18_other").click(function () { //其他
+        $(".other.18").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".other.18").each(function () {
+            $(this).hide();
+        });
+    })
+
 });
