@@ -1,6 +1,6 @@
 $(document).ready(function () {
     //$("#2012").show();
-    $("#TABLE table tbody tr").not(".16").each(function () {
+    $("#TABLE table tbody tr").not(".18").each(function () {
         $(this).hide();
     });
 
@@ -292,8 +292,112 @@ $(document).ready(function () {
             $(this).hide();
         });
     })
+	
     //---------------- 2015 --------------
-
+	$("#nav_15_all").click(function () {
+        $(".15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".15").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_15_official").click(function () {
+        $(".official.15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".official.15").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_15_dage").click(function () {
+        $(".music_stage.15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".music_stage.15").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_15_Radio").click(function () {
+        $(".Radio.15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".Radio.15").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_15_group_arts").click(function () {
+        $(".group_arts.15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".group_arts.15").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_15_tv_station").click(function () {
+        $(".tv_station.15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".tv_station.15").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_15_pub_performance").click(function () {
+        $(".pub_performance.15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".pub_performance.15").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_15_news").click(function () {
+        $(".news.15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".news.15").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_15_magazine_cf").click(function () {
+        $(".magazine.15,.cf.15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".magazine.15,.cf.15").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_15_concert_FM").click(function () { //演唱会 & FM
+        $(".concert.15,.FM.15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".concert.15,.FM.15").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_15_live").click(function () { // 直播
+        $(".live.15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".live.15").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_15_teleplay").click(function () { //电视剧
+        $(".teleplay.15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".teleplay.15").each(function () {
+            $(this).hide();
+        });
+    })
+    $("#nav_15_other").click(function () {
+        $(".other.15").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".other.15").each(function () {
+            $(this).hide();
+        });
+    })
 
     //---------------- 2016 --------------
     $("#nav_16_all").click(function () {
