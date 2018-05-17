@@ -1,4 +1,4 @@
-# BTOB resource summary page
+# My idol resource summary page
 Please pay attention to this is a special repository.
 * reject pull request
 * No secondary alteration
