@@ -1,2 +1,5 @@
-# fansite_test2
-fan website test
+# My idol resource summary page
+Please pay attention to this is a special repository.
+* Reject pull request
+* No secondary alteration
+* Prohibit theft
