@@ -1,749 +1,239 @@
 $(document).ready(function () {
-    //$("#2012").show();
-    $("#TABLE table tbody tr").not(".18").each(function () {
-        $(this).hide();
-    });
+    var type = getQueryVariable("type");
+    console.log("type :"+type);
 
-    //-------以上是页面初始执行的内容-----------
-    $("#nav_12_all").click(function () {
-        $(".12").each(function () {
+    
+    if( type=="official" ){
+        $(".official").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".12").each(function () {
+        $("#TABLE table tbody tr").not(".official").each(function () {
             $(this).hide();
         });
+    }
+    else if( type=="music_stage" ){
+        $(".music_stage").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".music_stage").each(function () {
+            $(this).hide();
+        });
+    }
+    else if( type=="Radio" ){
+        $(".Radio").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".Radio").each(function () {
+            $(this).hide();
+        });
+    }
+    else if( type=="group_arts" ){
+        $(".group_arts").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".group_arts").each(function () {
+            $(this).hide();
+        });
+    }
+    else if( type=="tv_station" ){
+        $(".tv_station").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".tv_station").each(function () {
+            $(this).hide();
+        });
+    }
+    else if( type=="news" ){
+        $(".news").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".news").each(function () {
+            $(this).hide();
+        });
+    }
+    else if( type=="pub_performance" ){
+        $(".pub_performance").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".pub_performance").each(function () {
+            $(this).hide();
+        });
+    }
+    else if( type=="cf" ){
+        $(".cf,.magazine").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".cf,.magazine").each(function () {
+            $(this).hide();
+        });
+    }
+    else if( type=="VLOG" ){
+        $(".VLOG").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".VLOG").each(function () {
+            $(this).hide();
+        });
+    }
+    else if( type=="concert" ){
+        $(".concert,.FM").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".concert,.FM").each(function () {
+            $(this).hide();
+        });
+    }
+    else if( type=="live" ){
+        $(".live").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".live").each(function () {
+            $(this).hide();
+        });
+    }
+    else if( type=="teleplay" ){
+        $(".teleplay").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".teleplay").each(function () {
+            $(this).hide();
+        });
+    }
+    else if( type=="other" ){
+        $(".other").each(function () {
+            $(this).show();
+        });
+        $("#TABLE table tbody tr").not(".other").each(function () {
+            $(this).hide();
+        });
+    }
 
-    })
-    $("#nav_12_official").click(function () {
-        $(".official.12").each(function () {
+
+    //--------------------------------------------------------
+    $("#All").click(function (){
+        $("#TABLE table tbody tr").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".official.12").each(function () {
-            $(this).hide();
-        });
     })
-    $("#nav_12_dage").click(function () {
-        $(".music_stage.12").each(function () {
+
+    $("#Official").click(function (){
+        $(".official").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".music_stage.12").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_12_Radio").click(function () {
-        $(".Radio.12").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".Radio.12").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_12_group_arts").click(function () {
-        $(".group_arts.12").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".group_arts.12").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_12_tv_station").click(function () {
-        $(".tv_station.12").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".tv_station.12").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_12_pub_performance").click(function () {
-        $(".pub_performance.12").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".pub_performance.12").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_12_news").click(function () {
-        $(".news.12").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".news.12").each(function () {
-            $(this).hide();
-        });
-    })
-    //---------- 2013 ----------
-    $("#nav_13_all").click(function () {
-        $(".13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".13").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_13_official").click(function () {
-        $(".official.13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".official.13").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_13_dage").click(function () {
-        $(".music_stage.13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".music_stage.13").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_13_Radio").click(function () {
-        $(".Radio.13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".Radio.13").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_13_group_arts").click(function () {
-        $(".group_arts.13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".group_arts.13").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_13_tv_station").click(function () {
-        $(".tv_station.13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".tv_station.13").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_13_news").click(function () {
-        $(".news.13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".news.13").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_13_VLOG").click(function () {
-        $(".VLOG.13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".VLOG.13").each(function () {
+        $("#TABLE table tbody tr").not(".official").each(function () {
             $(this).hide();
         });
     })
 
-    $("#nav_13_pub_performance").click(function () {
-        $(".pub_performance.13").each(function () {
+    $("#Music_stage").click(function (){
+        $(".music_stage").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".pub_performance.13").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_13_magazine_cf").click(function () {
-        $(".magazine.13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".magazine.13").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_13_FM").click(function () {
-        $(".FM.13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".FM.13").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_13_concert_FM").click(function () { //演唱会
-        $(".concert.13,.FM.13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".concert.13,.FM.13").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_13_teleplay").click(function () { //电视剧
-        $(".teleplay.13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".teleplay.13").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_13_other").click(function () {
-        $(".other.13").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".other.13").each(function () {
+        $("#TABLE table tbody tr").not(".music_stage").each(function () {
             $(this).hide();
         });
     })
 
-
-
-    //---------------- 2014 --------------
-    $("#nav_14_all").click(function () {
-        $(".14").each(function () {
+    $("#radio").click(function (){
+        $(".Radio").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".14").each(function () {
+        $("#TABLE table tbody tr").not(".Radio").each(function () {
             $(this).hide();
         });
     })
-    $("#nav_14_official").click(function () {
-        $(".official.14").each(function () {
+    $("#Group_arts").click(function (){
+        $(".group_arts").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".official.14").each(function () {
+        $("#TABLE table tbody tr").not(".group_arts").each(function () {
             $(this).hide();
         });
     })
-    $("#nav_14_dage").click(function () {
-        $(".music_stage.14").each(function () {
+    $("#Tv_station").click(function (){
+        $(".tv_station").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".music_stage.14").each(function () {
+        $("#TABLE table tbody tr").not(".tv_station").each(function () {
             $(this).hide();
         });
     })
-    $("#nav_14_Radio").click(function () {
-        $(".Radio.14").each(function () {
+    $("#News").click(function (){
+        $(".news").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".Radio.14").each(function () {
+        $("#TABLE table tbody tr").not(".news").each(function () {
             $(this).hide();
         });
     })
-    $("#nav_14_group_arts").click(function () {
-        $(".group_arts.14").each(function () {
+    $("#Pub_performance").click(function (){
+        $(".pub_performance").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".group_arts.14").each(function () {
+        $("#TABLE table tbody tr").not(".pub_performance").each(function () {
             $(this).hide();
         });
     })
-    $("#nav_14_tv_station").click(function () {
-        $(".tv_station.14").each(function () {
+    $("#Cf").click(function (){
+        $(".cf,.magazine").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".tv_station.14").each(function () {
+        $("#TABLE table tbody tr").not(".cf,.magazine").each(function () {
             $(this).hide();
         });
     })
-    $("#nav_14_pub_performance").click(function () {
-        $(".pub_performance.14").each(function () {
+    $("#vLOG").click(function (){
+        $(".VLOG").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".pub_performance.14").each(function () {
+        $("#TABLE table tbody tr").not(".VLOG").each(function () {
             $(this).hide();
         });
     })
-    $("#nav_14_news").click(function () {
-        $(".news.14").each(function () {
+    $("#Concert").click(function (){
+        $(".concert,.FM").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".news.14").each(function () {
+        $("#TABLE table tbody tr").not(".concert,.FM").each(function () {
             $(this).hide();
         });
     })
-    $("#nav_14_magazine_cf").click(function () {
-        $(".magazine.14,.cf.14").each(function () {
+    $("#Live").click(function (){
+        $(".live").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".magazine.14,.cf.14").each(function () {
+        $("#TABLE table tbody tr").not(".live").each(function () {
             $(this).hide();
         });
     })
-    $("#nav_14_concert_FM").click(function () { //演唱会 & FM
-        $(".concert.14,.FM.14").each(function () {
+    $("#Teleplay").click(function (){
+        $(".teleplay").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".concert.14,.FM.14").each(function () {
+        $("#TABLE table tbody tr").not(".teleplay").each(function () {
             $(this).hide();
         });
     })
-    $("#nav_14_live").click(function () { // 直播
-        $(".live.14").each(function () {
+    $("#Other").click(function (){
+        $(".other").each(function () {
             $(this).show();
         });
-        $("#TABLE table tbody tr").not(".live.14").each(function () {
+        $("#TABLE table tbody tr").not(".other").each(function () {
             $(this).hide();
         });
     })
-    $("#nav_14_teleplay").click(function () { //电视剧
-        $(".teleplay.14").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".teleplay.14").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_14_other").click(function () {
-        $(".other.14").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".other.14").each(function () {
-            $(this).hide();
-        });
-    })
-	
-    //---------------- 2015 --------------
-	$("#nav_15_all").click(function () {
-        $(".15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".15").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_15_official").click(function () {
-        $(".official.15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".official.15").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_15_dage").click(function () {
-        $(".music_stage.15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".music_stage.15").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_15_Radio").click(function () {
-        $(".Radio.15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".Radio.15").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_15_group_arts").click(function () {
-        $(".group_arts.15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".group_arts.15").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_15_tv_station").click(function () {
-        $(".tv_station.15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".tv_station.15").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_15_pub_performance").click(function () {
-        $(".pub_performance.15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".pub_performance.15").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_15_news").click(function () {
-        $(".news.15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".news.15").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_15_magazine_cf").click(function () {
-        $(".magazine.15,.cf.15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".magazine.15,.cf.15").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_15_concert_FM").click(function () { //演唱会 & FM
-        $(".concert.15,.FM.15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".concert.15,.FM.15").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_15_live").click(function () { // 直播
-        $(".live.15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".live.15").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_15_teleplay").click(function () { //电视剧
-        $(".teleplay.15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".teleplay.15").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_15_other").click(function () {
-        $(".other.15").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".other.15").each(function () {
-            $(this).hide();
-        });
-    })
-
-    //---------------- 2016 --------------
-    $("#nav_16_all").click(function () {
-        $(".16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".16").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_16_official").click(function () {
-        $(".official.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".official.16").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_16_dage").click(function () {
-        $(".music_stage.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".music_stage.16").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_16_Radio").click(function () {
-        $(".Radio.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".Radio.16").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_16_group_arts").click(function () { //团综
-        $(".group_arts.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".group_arts.16").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_16_tv_station").click(function () { //放送
-        $(".tv_station.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".tv_station.16").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_16_news").click(function () { //新闻
-        $(".news.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".news.16").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_16_VLOG").click(function () { //VLOG
-        $(".VLOG.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".VLOG.16").each(function () {
-            $(this).hide();
-        });
-    })
-
-    $("#nav_16_pub_performance").click(function () { //公演 & FM 
-        $(".pub_performance.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".pub_performance.16").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_16_magazine_cf").click(function () { //画报 & cf
-        $(".magazine.16,.cf.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".magazine.16,.cf.16").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_16_concert_FM").click(function () { //演唱会
-        $(".concert.16,.FM.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".concert.16,.FM.16").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_16_live").click(function () { //直播
-        $(".live.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".live.16").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_16_teleplay").click(function () { //电视剧
-        $(".teleplay.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".teleplay.16").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_16_other").click(function () { //其他
-        $(".other.16").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".other.16").each(function () {
-            $(this).hide();
-        });
-    })
-
-
-    //---------------- 2017 --------------
-    $("#nav_17_all").click(function () {
-        $(".17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".17").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_17_official").click(function () {
-        $(".official.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".official.17").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_17_dage").click(function () {
-        $(".music_stage.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".music_stage.17").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_17_Radio").click(function () {
-        $(".Radio.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".Radio.17").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_17_group_arts").click(function () { //团综
-        $(".group_arts.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".group_arts.17").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_17_tv_station").click(function () { //放送
-        $(".tv_station.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".tv_station.17").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_17_news").click(function () { //新闻
-        $(".news.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".news.17").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_17_VLOG").click(function () { //VLOG
-        $(".VLOG.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".VLOG.17").each(function () {
-            $(this).hide();
-        });
-    })
-
-    $("#nav_17_pub_performance").click(function () { //公演 & FM 
-        $(".pub_performance.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".pub_performance.17").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_17_magazine_cf").click(function () { //画报 & cf
-        $(".magazine.17,.cf.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".magazine.17,.cf.17").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_17_concert_FM").click(function () { //演唱会
-        $(".concert.17,.FM.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".concert.17,.FM.17").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_17_live").click(function () { //直播
-        $(".live.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".live.17").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_17_teleplay").click(function () { //电视剧
-        $(".teleplay.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".teleplay.17").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_17_other").click(function () { //其他
-        $(".other.17").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".other.17").each(function () {
-            $(this).hide();
-        });
-    })
-
-
-    //---------------- 2018 --------------
-    $("#nav_18_all").click(function () {
-        $(".18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".18").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_18_official").click(function () {
-        $(".official.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".official.18").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_18_dage").click(function () {
-        $(".music_stage.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".music_stage.18").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_18_Radio").click(function () {
-        $(".Radio.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".Radio.18").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_18_group_arts").click(function () { //团综
-        $(".group_arts.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".group_arts.18").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_18_tv_station").click(function () { //放送
-        $(".tv_station.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".tv_station.18").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_18_news").click(function () { //新闻
-        $(".news.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".news.18").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_18_VLOG").click(function () { //VLOG
-        $(".VLOG.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".VLOG.18").each(function () {
-            $(this).hide();
-        });
-    })
-
-    $("#nav_18_pub_performance").click(function () { //公演 & FM 
-        $(".pub_performance.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".pub_performance.18").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_18_magazine_cf").click(function () { //画报 & cf
-        $(".magazine.18,.cf.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".magazine.18,.cf.18").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_18_concert_FM").click(function () { //演唱会
-        $(".concert.18,.FM.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".concert.18,.FM.18").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_18_live").click(function () { //直播
-        $(".live.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".live.18").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_18_teleplay").click(function () { //电视剧
-        $(".teleplay.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".teleplay.18").each(function () {
-            $(this).hide();
-        });
-    })
-    $("#nav_18_other").click(function () { //其他
-        $(".other.18").each(function () {
-            $(this).show();
-        });
-        $("#TABLE table tbody tr").not(".other.18").each(function () {
-            $(this).hide();
-        });
-    })
-
 });
+
+
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){
+                   return pair[1];
+                }
+       }
+       return(false);
+}
