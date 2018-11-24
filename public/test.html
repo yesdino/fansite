@@ -49,21 +49,21 @@
                 ],
                 // "dom": '<"top"i>rt<"bottom"flp><"clear">',
                 initComplete: function () {
-                    // 每一行的第三列元素
-                    this.api().columns(3).every( function () {
-                        var column3 = this;
+                    // 每一行的第4列元素
+                    this.api().columns(4).every( function () {
+                        var col_classify = this;
                         var select = $('<select><option value=""></option></select>')
-                            .appendTo( $(column3.header()).empty() )
+                            .appendTo( $(col_classify.header()).empty() )
                             .on( 'change', function () {
                                 var val = $.fn.dataTable.util.escapeRegex(
                                     $(this).val()
                                 );
-                                column3
+                                col_classify
                                     .search( val ? '^'+val+'$' : '', true, false )
                                     .draw();
                             } );
                         // 遍历第三列每一个元素 不重复排序添加到option中
-                        column3.data().unique().sort().each( function ( d, j ) {
+                        col_classify.data().unique().sort().each( function ( d, j ) {
                             select.append( '<option value="'+d+'">'+d+'</option>' )
                         } );
                     } );
