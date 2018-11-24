@@ -41,7 +41,7 @@
                 ],
                 // "dom": '<"top"i>rt<"bottom"flp><"clear">',
                 initComplete: function () {
-                    var column = this.api().columns(4);
+                    var column = this.api().columns(3);
                     var select = $('<select><option value=""></option></select>')
                         .appendTo( $(column.header()).empty() )
                         .on( 'change', function () {
@@ -57,7 +57,7 @@
                     column.data().unique().sort().each( function ( d, j ) {
                         select.append( '<option value="'+d+'">'+d+'</option>' )
                     } );
-                    
+
                     // this.api().columns().every( function () {
                     //     var column = this;
                     //     var select = $('<select><option value=""></option></select>')
@@ -142,18 +142,6 @@
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <div id="TABLE">
-            <table>
-                <thead>
-                    <tr>
-                        <th>日期</th>
-                        <th>在线观看</th>
-                        <th>B站</th>
-                        <th>分类</th>
-                        <th>资源 </th>
-                    </tr>
-                </thead>
-            </table>
-            <!-- <img id="pic" src="http://wx1.sinaimg.cn/large/006HiDTFgy1fmsu2d4trjj31410qoq9e.jpg" onload="($CONFIG.img_size.w = this.width,$CONFIG.img_size.h = this.height, $CONFIG.init_zoom(this))"/> -->
             <table id="all_tab"class="table table-hover display" style="width:100%">
                 <thead>
                     <tr>
