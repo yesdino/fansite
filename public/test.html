@@ -33,46 +33,37 @@
             $("#all_tab").DataTable({
                 "ajax": "excel/data.txt",
                 "columns": [
-                    { "data": "日期" },
-                    { "data": "标题" },
-                    { "data": "B站" },
-                    { "data": "分类" },
-                    { "data": "度盘" }
+                    { "data": "日期" }, //0
+                    { "data": "标题" }, //1
+                    { "data": "在线" }, //2 hidden
+                    { "data": "B站" },  //3
+                    { "data": "分类" }, //4
+                    { "data": "类名" }, //5 hidden
+                    { "data": "度盘" }, //6 
+                    { "data": "密码" }  //7 hidden
+                ],
+                "columnDefs": [
+                    { "targets": [ 2 ], "visible": false, "searchable": false },
+                    { "targets": [ 5 ], "visible": false, "searchable": false },
+                    { "targets": [ 7 ], "visible": false, "searchable": false }
                 ],
                 // "dom": '<"top"i>rt<"bottom"flp><"clear">',
                 initComplete: function () {
-                    // var column = this.api().columns(3);
-                    // var select = $('<select><option value=""></option></select>')
-                    //     .appendTo( $(column.header()).empty() )
-                    //     .on( 'change', function () {
-                    //         var val = $.fn.dataTable.util.escapeRegex(
-                    //             $(this).val()
-                    //         );
-    
-                    //         column
-                    //             .search( val ? '^'+val+'$' : '', true, false )
-                    //             .draw();
-                    //     } );
-    
-                    // column.data().unique().sort().each( function ( d, j ) {
-                    //     select.append( '<option value="'+d+'">'+d+'</option>' )
-                    // } );
-
+                    // 每一行的第三列元素
                     this.api().columns(3).every( function () {
-                        var column = this;
+                        var column3 = this;
                         var select = $('<select><option value=""></option></select>')
-                            .appendTo( $(column.header()).empty() )
+                            .appendTo( $(column3.header()).empty() )
                             .on( 'change', function () {
                                 var val = $.fn.dataTable.util.escapeRegex(
                                     $(this).val()
                                 );
-        
-                                column
+                                column3
                                     .search( val ? '^'+val+'$' : '', true, false )
                                     .draw();
                             } );
-        
-                        column.data().unique().sort().each( function ( d, j ) {
+                        // 遍历第三列每一个元素 不重复排序添加到option中
+                        column3.data().unique().sort().each( function ( d, j ) {
                             select.append( '<option value="'+d+'">'+d+'</option>' )
                         } );
                     } );
@@ -152,7 +143,7 @@
                         <th>资源 </th>
                     </tr>
                 </thead>
-                <tfoot>
+                <!-- <tfoot>
                     <tr>
                         <th>日期</th>
                         <th>在线观看</th>
@@ -160,7 +151,7 @@
                         <th>分类</th>
                         <th>资源 </th>
                     </tr>
-                </tfoot>
+                </tfoot> -->
             </table>
             <!-- #TABLE end -->
 
