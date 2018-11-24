@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="static/img/logo.png">
+    <title>BTOB | 资源汇总</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <!-- <script type="text/javascript" src="static/js/public.js"></script> -->
+    <script type="text/javascript">
+        /*
+        document.onkeydown=function (e) {
+            e=window.event||e;
+            // console.log(e.keyCode);
+            if(e.keyCode==17) {
+                if(e.keyCode==83) {
+                    console.log(e.keyCode);
+                    return false;
+                }
+            }
+        };
+        */
+        $(document).ready(function() {
+            $("#all_tab").DataTable({
+                "ajax": "excel/data.txt",
+                "columns": [
+                    { "data": "日期" },
+                    { "data": "标题" },
+                    { "data": "B站" },
+                    { "data": "分类" },
+                    { "data": "度盘" }
+                ]
+            });
+        });
+    </script>
+</head>
+
+<!--<body oncontextmenu=self.event.returnValue=false onselectstart="return false">-->
+<body>
+    <div id="all">
+        <!--navbar-->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="NAV" style="position:fixed;top:0px;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+                    <a class="navbar-brand">BTOB</a>
+                </div>
+                <div class="navbar-collapse collapse" id="nav_collapse">
+                    <ul class="nav navbar-nav">
+                        <!-------------------------------------------- 2012 ---------------------------------------------->
+                        <li class="dropdown">
+                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2012<span class="caret"></span></a>
+                        </li>     
+
+                        <!-------------------------------------------- 2013 ---------------------------------------------->
+                        <li class="dropdown">
+                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2013<span class="caret"></span></a>
+                        </li>
+
+                        <!-------------------------------------------- 2014 ---------------------------------------------->
+                        <li class="dropdown">
+                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2014<span class="caret"></span></a>
+                        </li>
+
+                        <!-------------------------------------------- 2015 ---------------------------------------------->
+                        <li class="dropdown">
+                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2015<span class="caret"></span></a>
+                        </li>
+
+                        <!-------------------------------------------- 2016 ---------------------------------------------->
+                        <li class="dropdown">
+                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2016<span class="caret"></span></a>
+                        </li>
+
+                        <!-------------------------------------------- 2017 ---------------------------------------------->
+                        <li class="dropdown">
+                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2017<span class="caret"></span></a>
+                        </li>
+
+                        <!------------------------------------------- 2018 ----------------------------------------------->
+                        <li class="dropdown">
+                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2018<span class="caret"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- navbar end -->
+
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <div id="TABLE">
+            <!-- <img id="pic" src="http://wx1.sinaimg.cn/large/006HiDTFgy1fmsu2d4trjj31410qoq9e.jpg" onload="($CONFIG.img_size.w = this.width,$CONFIG.img_size.h = this.height, $CONFIG.init_zoom(this))"/> -->
+            <table id="all_tab"class="table table-hover display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>在线观看</th>
+                        <th>B站</th>
+                        <th>分类</th>
+                        <th>资源 </th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>日期</th>
+                        <th>在线观看</th>
+                        <th>B站</th>
+                        <th>分类</th>
+                        <th>资源 </th>
+                    </tr>
+                </tfoot>
+            </table>
+            <!-- #TABLE end -->
+
+            <!-- return top button -->
+            <div type="button" class="btn btn-info btn-lg" style="position: fixed;bottom: 10px;right: 2%;">
+                <a class="glyphicon glyphicon-arrow-up" href="javascript:scrollTo(0,0);" style="color: white;display: block;"></a>
+            </div>
+        </div>
+        <!-- TABLE -->
+</body>
+</html>
