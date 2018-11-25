@@ -98,7 +98,7 @@
                     { "targets": [ 5 ], "visible": false, "searchable": false, },
                     { "targets": [ 7 ], "visible": false, "searchable": false, }
                 ],
-                "order": [[0, 'asc']],
+                "order": [[0, 'desc']],
                 // "dom": '<"top"i>rt<"bottom"flp><"clear">',
                 initComplete: function () {
                     // 每一行的第4列元素
@@ -127,7 +127,7 @@
                     // row : tr dom
                     // data: row data
                     // dataIndex:row data's index
-                    $(row).addClass(data[5]);
+                    $(row).addClass(row[5]);
                 }
             });
         });
