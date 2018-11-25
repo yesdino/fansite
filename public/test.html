@@ -30,8 +30,14 @@
         };
         */
         $(document).ready(function() {
+            var year = getQueryVariable("year");
+            console.log("year :"+type);
+            
+            if(!year)
+                year = "18"
+
             $("#all_tab").DataTable({
-                "ajax": "excel/data.json",
+                "ajax": "excel/"+year+".json",
                 "columns": [
                     { "data": "日期" }, //0
                     { "data": "标题" }, //1
@@ -153,37 +159,31 @@
                     <ul class="nav navbar-nav">
                         <!-------------------------------------------- 2012 ---------------------------------------------->
                         <li class="dropdown">
-                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2012<span class="caret"></span></a>
+                            <a href="?year=12" data-toggle="dropdown" class="dropdown-toggle">2012</a>
                         </li>     
-
                         <!-------------------------------------------- 2013 ---------------------------------------------->
                         <li class="dropdown">
-                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2013<span class="caret"></span></a>
+                            <a href="?year=13" data-toggle="dropdown" class="dropdown-toggle">2013</a>
                         </li>
-
                         <!-------------------------------------------- 2014 ---------------------------------------------->
                         <li class="dropdown">
-                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2014<span class="caret"></span></a>
+                            <a href="?year=14" data-toggle="dropdown" class="dropdown-toggle">2014</a>
                         </li>
-
                         <!-------------------------------------------- 2015 ---------------------------------------------->
                         <li class="dropdown">
-                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2015<span class="caret"></span></a>
+                            <a href="?year=15" data-toggle="dropdown" class="dropdown-toggle">2015</a>
                         </li>
-
                         <!-------------------------------------------- 2016 ---------------------------------------------->
                         <li class="dropdown">
-                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2016<span class="caret"></span></a>
+                            <a href="?year=16" data-toggle="dropdown" class="dropdown-toggle">2016</a>
                         </li>
-
                         <!-------------------------------------------- 2017 ---------------------------------------------->
                         <li class="dropdown">
-                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2017<span class="caret"></span></a>
+                            <a href="?year=17" data-toggle="dropdown" class="dropdown-toggle">2017</a>
                         </li>
-
                         <!------------------------------------------- 2018 ----------------------------------------------->
                         <li class="dropdown">
-                            <a href="##" data-toggle="dropdown" class="dropdown-toggle">2018<span class="caret"></span></a>
+                            <a href="?year=18" data-toggle="dropdown" class="dropdown-toggle">2018</a>
                         </li>
                     </ul>
                 </div>
