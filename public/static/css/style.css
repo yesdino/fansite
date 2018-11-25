@@ -120,7 +120,6 @@ body {
 }
 
 /*日期*/
-
 #TABLE table tr :nth-child(1) {
     /*            background-color: #ffd4a1;*/
     /*断行 即使是单词也断*/
@@ -129,7 +128,6 @@ body {
 }
 
 /*在线*/
-
 #TABLE table tr :nth-child(2) {
     /*    background-color: #a1ffd0;*/
     word-break: break-all;
@@ -137,14 +135,12 @@ body {
 }
 
 /*B站*/
-
 #TABLE table tr :nth-child(3) {
     /*    background-color: #a1e9ff;*/
     /*    width: 11%;*/
 }
 
 /*分类*/
-
 #TABLE table tr :nth-child(4) {
     /*    background-color: #a8a1ff;*/
     /*    width: 12%;*/
