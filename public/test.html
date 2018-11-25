@@ -45,35 +45,58 @@
                 // 列定义
                 "columnDefs": [
                     {
+                        // "标题"
                         "targets": [ 1 ],
                         render: function (data, type, row, meta) {
                             if (type === 'display') {
                                 var onlink_url = row[2];
-                                if(onlink_url=="xx"){
+                                if(onlink_url=="xx")
                                     return data;
-                                }
-                                else{
+                                else
                                     return '<a href="'+onlink_url+'">'+ data+'</a>';
-                                }
                             }
                             return data;
                         }
                     },
-                    { 
-                        "targets": [ 2 ], 
-                        "visible": false, 
-                        "searchable": false,
+                    {
+                        // "B站"
+                        "targets": [ 3 ],
+                        render: function (data, type, row, meta) {
+                            if (type === 'display') {
+                                var Bzhan_url = row[3];
+                                if(Bzhan_url=="xx")
+                                    return "暂无";
+                                else
+                                    return '<a href="'+Bzhan_url+'">B站</a>';
+                                
+                            }
+                            return "暂无";
+                        }
                     },
-                    { 
-                        "targets": [ 5 ], 
-                        "visible": false, 
-                        "searchable": false,
+                    {
+                        // "度盘"
+                        "targets": [ 6 ],
+                        render: function (data, type, row, meta) {
+                            if (type === 'display') {
+                                var psword = row[6];
+                                if(data=="xx"){
+                                    return "暂无";
+                                }
+                                else{
+                                    if(psword=="xx"){
+                                        return '<a href="'+data+'">资源</a>';
+                                    }
+                                    else{
+                                        return '<a href="'+data+'">资源</a> ('+psword+')';
+                                    }
+                                }
+                            }
+                            return "暂无";
+                        }
                     },
-                    { 
-                        "targets": [ 7 ], 
-                        "visible": false, 
-                        "searchable": false,
-                    }
+                    { "targets": [ 2 ], "visible": false, "searchable": false, },
+                    { "targets": [ 5 ], "visible": false, "searchable": false, },
+                    { "targets": [ 7 ], "visible": false, "searchable": false, }
                 ],
                 "order": [[0, 'asc']],
                 // "dom": '<"top"i>rt<"bottom"flp><"clear">',
