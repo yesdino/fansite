@@ -48,7 +48,7 @@
                         "targets": [ 1 ],
                         render: function (data, type, row, meta) {
                             if (type === 'display') {
-                                var onlink_url = data.next();
+                                var onlink_url = row[2];
                                 if(onlink_url=="xx"){
                                     return data;
                                 }
