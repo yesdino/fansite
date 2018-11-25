@@ -1,143 +1,156 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="static/img/logo.png">
-    <title>BTOB | 资源汇总</title>
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    
+<meta charset="utf-8">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="static/img/logo.png">
+<title>BTOB | 资源汇总</title>
+<link rel="stylesheet" href="static/css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
 
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
-    <!-- <script type="text/javascript" src="static/js/public.js"></script> -->
-    <script type="text/javascript">
-        /*
-        document.onkeydown=function (e) {
-            e=window.event||e;
-            // console.log(e.keyCode);
-            if(e.keyCode==17) {
-                if(e.keyCode==83) {
-                    console.log(e.keyCode);
-                    return false;
-                }
-            }
-        };
-        */
-        $(document).ready(function() {
-            var year = getQueryVariable("year");
-            console.log("year :"+type);
-            
-            if(!year)
-                year = "18"
+<!-- <script type="text/javascript" src="static/js/public.js"></script> -->
+<script type="text/javascript">
+/*
+document.onkeydown=function (e) {
+    e=window.event||e;
+    // console.log(e.keyCode);
+    if(e.keyCode==17) {
+        if(e.keyCode==83) {
+            console.log(e.keyCode);
+            return false;
+        }
+    }
+};
+*/
+$(document).ready(function() {
+    var year = getQueryVariable("year");
+    console.log("year :"+type);
+    
+    if(!year)
+        year = "18"
 
-            $("#all_tab").DataTable({
-                "ajax": "excel/"+year+".json",
-                "columns": [
-                    { "data": "日期" }, //0
-                    { "data": "标题" }, //1
-                    { "data": "在线" }, //2 hidden
-                    { "data": "B站" },  //3
-                    { "data": "分类" }, //4
-                    { "data": "类名" }, //5 hidden
-                    { "data": "度盘" }, //6 
-                    { "data": "密码" }  //7 hidden
-                ],
-                // 列定义
-                "columnDefs": [
-                    {
-                        // "标题"
-                        "targets": [ 1 ],
-                        render: function (data, type, row, meta) {
-                            if (type === 'display') {
-                                var onlink_url = row[2];
-                                if(onlink_url=="xx")
-                                    return data;
-                                else
-                                    return '<a href="'+onlink_url+'">'+ data+'</a>';
-                            }
+    $("#all_tab").DataTable({
+        "ajax": "excel/"+year+".json",
+        "columns": [
+            { "data": "日期" }, //0
+            { "data": "标题" }, //1
+            { "data": "在线" }, //2 hidden
+            { "data": "B站" },  //3
+            { "data": "分类" }, //4
+            { "data": "类名" }, //5 hidden
+            { "data": "度盘" }, //6 
+            { "data": "密码" }  //7 hidden
+        ],
+        // 列定义
+        "columnDefs": [
+            {
+                // "标题"
+                "targets": [ 1 ],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        var onlink_url = row[2];
+                        if(onlink_url=="xx")
                             return data;
-                        }
-                    },
-                    {
-                        // "B站"
-                        "targets": [ 3 ],
-                        render: function (data, type, row, meta) {
-                            if (type === 'display') {
-                                var Bzhan_url = row[3];
-                                if(Bzhan_url=="xx")
-                                    return "暂无";
-                                else
-                                    return '<a href="'+Bzhan_url+'">B站</a>';
-                                
-                            }
-                            return "暂无";
-                        }
-                    },
-                    {
-                        // "度盘"
-                        "targets": [ 6 ],
-                        render: function (data, type, row, meta) {
-                            if (type === 'display') {
-                                var psword = row[6];
-                                if(data=="xx"){
-                                    return "暂无";
-                                }
-                                else{
-                                    if(psword=="xx"){
-                                        return '<a href="'+data+'">资源</a>';
-                                    }
-                                    else{
-                                        return '<a href="'+data+'">资源</a> ('+psword+')';
-                                    }
-                                }
-                            }
-                            return "暂无";
-                        }
-                    },
-                    { "targets": [ 2 ], "visible": false, "searchable": false, },
-                    { "targets": [ 5 ], "visible": false, "searchable": false, },
-                    { "targets": [ 7 ], "visible": false, "searchable": false, }
-                ],
-                "order": [[0, 'desc']],
-                // "dom": '<"top"i>rt<"bottom"flp><"clear">',
-                initComplete: function () {
-                    // 每一行的第4列元素
-                    this.api().columns(4).every( function () {
-                        var classify_col = this;
-                        var select = $('<select><option value=""></option></select>')
-                            .appendTo( $(classify_col.header()).empty() )
-                            .on( 'change', function () {
-                                var val = $.fn.dataTable.util.escapeRegex(
-                                    $(this).val()
-                                );
-                                classify_col
-                                    // 搜索条件
-                                    .search( val ? '^'+val+'$' : '', true, false )
-                                    // 开始加载
-                                    .draw();
-                            } );
-                        // 遍历第三列每一个元素 不重复排序添加到option中
-                        classify_col.data().unique().sort().each( function ( d, j ) {
-                            select.append( '<option value="'+d+'">'+d+'</option>' )
-                        } );
-                    } );
-                },
-                // 每一行创建完调用的函数
-                "createdRow": function (row, data, dataIndex) {
-                    // row : tr dom
-                    // data: row data
-                    // dataIndex:row data's index
-                    $(row).addClass(row[5]);
+                        else
+                            return '<a href="'+onlink_url+'">'+ data+'</a>';
+                    }
+                    return data;
                 }
-            });
-        });
-    </script>
+            },
+            {
+                // "B站"
+                "targets": [ 3 ],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        var Bzhan_url = row[3];
+                        if(Bzhan_url=="xx")
+                            return "暂无";
+                        else
+                            return '<a href="'+Bzhan_url+'">B站</a>';
+                        
+                    }
+                    return "暂无";
+                }
+            },
+            {
+                // "度盘"
+                "targets": [ 6 ],
+                render: function (data, type, row, meta) {
+                    if (type === 'display') {
+                        var psword = row[6];
+                        if(data=="xx"){
+                            return "暂无";
+                        }
+                        else{
+                            if(psword=="xx"){
+                                return '<a href="'+data+'">资源</a>';
+                            }
+                            else{
+                                return '<a href="'+data+'">资源</a> ('+psword+')';
+                            }
+                        }
+                    }
+                    return "暂无";
+                }
+            },
+            { "targets": [ 2 ], "visible": false, "searchable": false, },
+            { "targets": [ 5 ], "visible": false, "searchable": false, },
+            { "targets": [ 7 ], "visible": false, "searchable": false, }
+        ],
+        "order": [[0, 'desc']],
+        // "dom": '<"top"i>rt<"bottom"flp><"clear">',
+        initComplete: function () {
+            // 每一行的第4列元素
+            this.api().columns(4).every( function () {
+                var classify_col = this;
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(classify_col.header()).empty() )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+                        classify_col
+                            // 搜索条件
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            // 开始加载
+                            .draw();
+                    } );
+                // 遍历第三列每一个元素 不重复排序添加到option中
+                classify_col.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        },
+        // 每一行创建完调用的函数
+        "createdRow": function (row, data, dataIndex) {
+            // row : tr dom
+            // data: row data
+            // dataIndex:row data's index
+            $(row).addClass(row[5]);
+        }
+    });
+});
+function getQueryVariable(variable)
+{
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){
+                return pair[1];
+                }
+    }
+    return(false);
+}
+</script>
 </head>
 
 <!--<body oncontextmenu=self.event.returnValue=false onselectstart="return false">-->
