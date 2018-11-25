@@ -42,10 +42,38 @@
                     { "data": "度盘" }, //6 
                     { "data": "密码" }  //7 hidden
                 ],
+                // 列定义
                 "columnDefs": [
-                    { "targets": [ 2 ], "visible": false, "searchable": false },
-                    { "targets": [ 5 ], "visible": false, "searchable": false },
-                    { "targets": [ 7 ], "visible": false, "searchable": false }
+                    {
+                        "targets": [ 1 ],
+                        render: function (data, type, row, meta) {
+                            if (type === 'display') {
+                                var onlink_url = $(data).next().html();
+                                if(onlink_url=="xx"){
+                                    return data;
+                                }
+                                else{
+                                    return '<a href="'+onlink_url+'">'+$(data).html()+'</a>';
+                                }
+                            }
+                            return data;
+                        }
+                    },
+                    { 
+                        "targets": [ 2 ], 
+                        "visible": false, 
+                        "searchable": false,
+                    },
+                    { 
+                        "targets": [ 5 ], 
+                        "visible": false, 
+                        "searchable": false,
+                    },
+                    { 
+                        "targets": [ 7 ], 
+                        "visible": false, 
+                        "searchable": false,
+                    }
                 ],
                 "order": [[0, 'asc']],
                 // "dom": '<"top"i>rt<"bottom"flp><"clear">',
