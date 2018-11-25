@@ -56,7 +56,7 @@ $(document).ready(function() {
                 "targets": [ 1 ],
                 render: function (data, type, row, meta) {
                     if (type === 'display') {
-                        var onlink_url = row.2;
+                        var onlink_url = row.data();
                         if(onlink_url=="xx")
                             return data;
                         else
