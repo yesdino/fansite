@@ -56,7 +56,7 @@ $(document).ready(function() {
                 "targets": [ 1 ],
                 render: function (data, type, row, meta) {
                     if (type === 'display') {
-                        var onlink_url = row[2];
+                        var onlink_url = row(2);
                         if(onlink_url=="xx")
                             return data;
                         else
@@ -70,7 +70,7 @@ $(document).ready(function() {
                 "targets": [ 3 ],
                 render: function (data, type, row, meta) {
                     if (type === 'display') {
-                        var Bzhan_url = row[3];
+                        var Bzhan_url = row(3);
                         if(Bzhan_url=="xx")
                             return "暂无";
                         else
@@ -85,7 +85,7 @@ $(document).ready(function() {
                 "targets": [ 6 ],
                 render: function (data, type, row, meta) {
                     if (type === 'display') {
-                        var psword = row[6];
+                        var psword = row(6);
                         if(data=="xx"){
                             return "暂无";
                         }
@@ -134,7 +134,7 @@ $(document).ready(function() {
             // row : tr dom
             // data: row data
             // dataIndex:row data's index
-            $(row).addClass(row[5]);
+            $(row).addClass(row(5));
         }
     });
 });
@@ -171,19 +171,12 @@ function getQueryVariable(variable)
                 </div>
                 <div class="navbar-collapse collapse" id="nav_collapse">
                     <ul class="nav navbar-nav">
-                        <!-------------------------------------------- 2012 ---------------------------------------------->
                         <li><a href="test.html?year=12">2012</a></li>     
-                        <!-------------------------------------------- 2013 ---------------------------------------------->
                         <li><a href="test.html?year=13">2013</a></li>
-                        <!-------------------------------------------- 2014 ---------------------------------------------->
                         <li><a href="test.html?year=14">2014</a></li>
-                        <!-------------------------------------------- 2015 ---------------------------------------------->
                         <li><a href="test.html?year=15">2015</a></li>
-                        <!-------------------------------------------- 2016 ---------------------------------------------->
                         <li><a href="test.html?year=16">2016</a></li>
-                        <!-------------------------------------------- 2017 ---------------------------------------------->
                         <li><a href="test.html?year=17">2017</a></li>
-                        <!------------------------------------------- 2018 ----------------------------------------------->
                         <li><a href="test.html?year=18">2018</a></li>
                     </ul>
                 </div>
