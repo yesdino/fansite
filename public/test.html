@@ -48,12 +48,12 @@
                         "targets": [ 1 ],
                         render: function (data, type, row, meta) {
                             if (type === 'display') {
-                                var onlink_url = data.next().html();
+                                var onlink_url = data.next();
                                 if(onlink_url=="xx"){
                                     return data;
                                 }
                                 else{
-                                    return '<a href="'+onlink_url+'">'+ data.html()+'</a>';
+                                    return '<a href="'+onlink_url+'">'+ data+'</a>';
                                 }
                             }
                             return data;
