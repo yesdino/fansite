@@ -57,7 +57,7 @@ $(document).ready(function() {
                 "targets": [ 1 ],
                 render: function (data, type, row, meta) {
                     if (type === 'display') {
-                        var onlink_url = row[2];
+                        var onlink_url = row.在线;
                         if(onlink_url=="xx")
                             return data;
                         else
@@ -71,7 +71,7 @@ $(document).ready(function() {
                 "targets": [ 3 ],
                 render: function (data, type, row, meta) {
                     if (type === 'display') {
-                        var Bzhan_url = row[3];
+                        var Bzhan_url = row.B站;
                         if(Bzhan_url=="xx")
                             return "暂无";
                         else
@@ -86,7 +86,7 @@ $(document).ready(function() {
                 "targets": [ 6 ],
                 render: function (data, type, row, meta) {
                     if (type === 'display') {
-                        var psword = row[6];
+                        var psword = row.度盘;
                         if(data=="xx"){
                             return "暂无";
                         }
@@ -131,7 +131,7 @@ $(document).ready(function() {
             } );
         },
         // 每一行创建完调用的函数
-        "createdRow": function (row, data, dataIndex) {
+        // "createdRow": function (row, data, dataIndex) {
             // row : tr dom
             // data: row data
             // dataIndex:row data's index
@@ -143,7 +143,7 @@ $(document).ready(function() {
 
 
             // console.log("td:eq(5) :"+$('td:eq(5)',row).html())
-            console.log(data.密码);
+            // console.log(data.密码);
             // data +', '+ row.position
 
 
