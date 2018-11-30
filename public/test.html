@@ -131,7 +131,7 @@ $(document).ready(function() {
             } );
         },
         // 每一行创建完调用的函数
-        // "createdRow": function (row, data, dataIndex) {
+        "createdRow": function (row, data, dataIndex) {
             // row : tr dom
             // data: row data
             // dataIndex:row data's index
@@ -149,7 +149,7 @@ $(document).ready(function() {
 
 
 
-            // $(row).addClass('official');
+            $(row).addClass(data.类名);
             // var ziyuan_url = $('td',row).eq(6).html();
             // var psword = $('td',row).eq(7).text();
             // $('td',row).eq(6).html('<a href="'+ziyuan_url+'">资源</a> ('+psword+')');
