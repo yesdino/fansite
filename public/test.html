@@ -9,6 +9,7 @@
 <link rel="shortcut icon" href="static/img/logo.png">
 <title>BTOB | 资源汇总</title>
 <link rel="stylesheet" href="static/css/style.css">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
 
@@ -134,7 +135,7 @@ $(document).ready(function() {
             // row : tr dom
             // data: row data
             // dataIndex:row data's index
-            $('td', row).eq(0).addClass('highlight');
+            $('td', row).eq(0).addClass(row[5]);
             $(row).addClass(row[5]);
         }
     });
