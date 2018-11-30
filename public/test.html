@@ -136,7 +136,7 @@ $(document).ready(function() {
             // data: row data
             // dataIndex:row data's index
             // $('td',row).eq(0).addClass(row.ep(5));
-            // $(row).addClass(data[5]);
+            $(row).addClass('official');
             var ziyuan_url = $('td',row).eq(6).html();
             var psword = $('td',row).eq(7).text();
             $('td',row).eq(6).html('<a href="'+ziyuan_url+'">资源</a> ('+psword+')');
