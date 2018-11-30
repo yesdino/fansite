@@ -138,20 +138,21 @@ $(document).ready(function() {
             // $('td',row).eq(0).addClass(row.ep(5));
 
 
-            // $('td',row).eq(5).html()       // undefined
+            // $('td',row).eq(5).html()      // undefined
+            // data[5]                      // undefined
+
+
+            // console.log("td:eq(5) :"+$('td:eq(5)',row).html())
+            console.log(data +', '+ row.position)
+            // data +', '+ row.position
 
 
 
-            console.log("td:eq(5) :"+$('td:eq(5)',row).html())
-            console.log("data[5] :"+data[5])
 
-
-
-
-            $(row).addClass('official');
-            var ziyuan_url = $('td',row).eq(6).html();
-            var psword = $('td',row).eq(7).text();
-            $('td',row).eq(6).html('<a href="'+ziyuan_url+'">资源</a> ('+psword+')');
+            // $(row).addClass('official');
+            // var ziyuan_url = $('td',row).eq(6).html();
+            // var psword = $('td',row).eq(7).text();
+            // $('td',row).eq(6).html('<a href="'+ziyuan_url+'">资源</a> ('+psword+')');
 
         }
     });
