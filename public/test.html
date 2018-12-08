@@ -97,7 +97,7 @@ $(document).ready(function() {
         ],
         "order": [[0, 'desc']],
         // 表格加載完成時調用
-        "initComplete": function () {
+        "initComplete": function (data) {
             console.log( '表格初始化完成 initComplete' );
             // 每一行的第4列元素
             this.api().columns(4).every( function () {
@@ -119,15 +119,6 @@ $(document).ready(function() {
                     select.append( '<option value="'+d+'">'+d+'</option>' )
                 } );
             } );
-        },
-        // 每一行创建完调用的函数
-        "createdRow": function (row, data, dataIndex) {
-            console.log( '一行 createdRow:'+dataIndex );
-            // row : tr dom
-            // data: row data
-            // dataIndex:row data's index
-            $(".sorting_1").css("background-color","");
-            $(row).addClass(data.类名);
             
             if(data.类名=="official"){
                 $(row).css("background-color","rgb(250, 236, 236)");
@@ -171,6 +162,18 @@ $(document).ready(function() {
             else if(data.类名=="other"){
                 $(row).css("background-color","#ebd7f4");
             }
+
+
+        },
+        // 每一行创建完调用的函数
+        "createdRow": function (row, data, dataIndex) {
+            // console.log( '一行 createdRow:'+dataIndex ); // DEBUG
+            // row : tr dom
+            // data: row data
+            // dataIndex:row data's index
+            $(".sorting_1").css("background-color","");
+            $(row).addClass(data.类名);
+            
         }
     });
 });
