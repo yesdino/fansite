@@ -1,6 +1,5 @@
 body {
     padding-top: 80px;
-    /* background-color:red; */
 }
 
 
@@ -29,14 +28,10 @@ body {
     margin-left: 0;
     text-align: center;
     overflow: hidden;
-
-    /*    white-space: pre-line;*/
-    /*            vertical-align: baseline;*/
 }
 
 /*日期*/
 #TABLE table tr :nth-child(1) {
-    /*            background-color: #ffd4a1;*/
     /*断行 即使是单词也断*/
     word-break: break-all;
     width: 15%;
@@ -44,28 +39,22 @@ body {
 
 /*在线*/
 #TABLE table tr :nth-child(2) {
-    /*    background-color: #a1ffd0;*/
     word-break: break-all;
     width: 51%;
 }
 
 /*B站*/
 #TABLE table tr :nth-child(3) {
-    /*    background-color: #a1e9ff;*/
-    /*    width: 11%;*/
 }
 
 /*分类*/
 #TABLE table tr :nth-child(4) {
-    /*    background-color: #a8a1ff;*/
-    /*    width: 12%;*/
 }
 
 /*资源*/
 
 #TABLE table tr :nth-child(5) {
     width: 12%;
-    /*    background-color: aqua;*/
     overflow: hidden;
 }
 
