@@ -96,8 +96,9 @@ $(document).ready(function() {
             { "targets": [ 7 ], "visible": false, "searchable": false, }
         ],
         "order": [[0, 'desc']],
-        
-        initComplete: function () {
+        // 表格加載完成時調用
+        "initComplete": function () {
+            console.log( '表格初始化完成 initComplete' );
             // 每一行的第4列元素
             this.api().columns(4).every( function () {
                 var classify_col = this;
@@ -121,6 +122,7 @@ $(document).ready(function() {
         },
         // 每一行创建完调用的函数
         "createdRow": function (row, data, dataIndex) {
+            console.log( '一行 createdRow:'+dataIndex );
             // row : tr dom
             // data: row data
             // dataIndex:row data's index
