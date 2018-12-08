@@ -1,6 +1,19 @@
 body {
     padding-top: 80px;
+    /* background-color:red; */
 }
+
+/*
+ .navbar-default .navbar-nav>li>a, .navbar-header, .container-fluid, .dropdown-menu li a { color: white; background-color: cornflowerblue; } .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus { color: cornflowerblue; background-color: transparent; }
+*/
+
+/*
+ .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { color: blue; background-color: green; }
+*/
+
+/*
+ #mon_selet a, #mon_selet a:hover, #mon_selet a:visited, #mon_selet a :focus { display: block; margin-bottom: 30px; color: #777777; }
+*/
 
 .official {
     /*官方*/

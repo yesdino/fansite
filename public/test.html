@@ -12,6 +12,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -22,7 +23,7 @@
 <script type="text/javascript">
 $(document).ready(function() {
     var year = getQueryVariable("year");
-    console.log("year :"+year);
+    // console.log("year :"+year);
     
     if(!year)
         year = "18"
@@ -124,29 +125,11 @@ $(document).ready(function() {
             // row : tr dom
             // data: row data
             // dataIndex:row data's index
-            // $('td',row).eq(0).addClass(row.ep(5));
-
-
-            // $('td',row).eq(5).html()      // undefined
-            // data[5]                      // undefined
-
-
-            // console.log("td:eq(5) :"+$('td:eq(5)',row).html())
-            // console.log(data.密码);
-            // data +', '+ row.position
-
-
-
-
             $(row).addClass(data.类名);
             
             if(data.类名=="music_stage"){
                 $(row).css("background-color","red");
             }
-
-            // var ziyuan_url = $('td',row).eq(6).html();
-            // var psword = $('td',row).eq(7).text();
-            // $('td',row).eq(6).html('<a href="'+ziyuan_url+'">资源</a> ('+psword+')');
 
         }
     });
@@ -165,7 +148,8 @@ function getQueryVariable(variable)
     return(false);
 }
 </script>
-<link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+
 </head>
 
 <!--<body oncontextmenu=self.event.returnValue=false onselectstart="return false">-->
