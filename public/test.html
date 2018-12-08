@@ -96,12 +96,11 @@ $(document).ready(function() {
             { "targets": [ 7 ], "visible": false, "searchable": false, }
         ],
         "order": [[0, 'desc']],
-        // 表格加載完成時調用
-        "initComplete": function (data) {
-            console.log( '表格初始化完成 initComplete' );
-            // 每一行的第4列元素
+        // 表格全部行加載完成時調用
+        "initComplete": function () {
+            console.log( '表格初始化完成 initComplete' );       // DEBUG
             this.api().columns(4).every( function () {
-                var classify_col = this;
+                var classify_col = this;        // 每一行的第4列元素
                 var select = $('<select><option value=""></option></select>')
                     .appendTo( $(classify_col.header()).empty() )
                     .on( 'change', function () {
@@ -119,6 +118,17 @@ $(document).ready(function() {
                     select.append( '<option value="'+d+'">'+d+'</option>' )
                 } );
             } );
+            
+
+
+        },
+        // 每一行创建完调用的函数
+        "createdRow": function (row, data, dataIndex) {
+            // console.log( '一行 createdRow:'+dataIndex ); // DEBUG
+            // row : tr dom
+            // data: row data
+            // dataIndex:row data's index
+            $(row).addClass(data.类名);
             
             if(data.类名=="official"){
                 $(row).css("background-color","rgb(250, 236, 236)");
@@ -162,18 +172,6 @@ $(document).ready(function() {
             else if(data.类名=="other"){
                 $(row).css("background-color","#ebd7f4");
             }
-
-
-        },
-        // 每一行创建完调用的函数
-        "createdRow": function (row, data, dataIndex) {
-            // console.log( '一行 createdRow:'+dataIndex ); // DEBUG
-            // row : tr dom
-            // data: row data
-            // dataIndex:row data's index
-            $(".sorting_1").css("background-color","");
-            $(row).addClass(data.类名);
-            
         }
     });
 });
@@ -204,6 +202,10 @@ function getQueryVariable(variable)
 .live {background-color: #ffe3c4;}
 .teleplay {background-color: #ffcefa;}
 .other {background-color: #ebd7f4;}
+
+tr.odd>.sorting_1 {
+    background-color: red;
+}
 </style>
 
 </head>
