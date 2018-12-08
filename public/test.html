@@ -126,7 +126,7 @@ $(document).ready(function() {
             // dataIndex:row data's index
             $(".sorting_1").css("background-color","");
             $(row).addClass(data.类名);
-
+            
             if(data.类名=="official"){
                 $(row).css("background-color","rgb(250, 236, 236)");
             }
@@ -186,7 +186,20 @@ function getQueryVariable(variable)
     return(false);
 }
 </script>
-
+<style>
+.group_arts {background-color: rgb(201, 245, 255)}
+.tv_station {background-color: aliceblue;}
+.news {background-color: #cdcfff;}
+.pub_performance {background-color: #FFCC99;}
+.magazine,
+.cf {background-color: #ffff9c;}
+.VLOG {background-color: #d4fab4;}
+.concert,
+.FM {background-color: #bbedff;}
+.live {background-color: #ffe3c4;}
+.teleplay {background-color: #ffcefa;}
+.other {background-color: #ebd7f4;}
+</style>
 
 </head>
 
