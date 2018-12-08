@@ -66,7 +66,6 @@ $(document).ready(function() {
                             return "暂无";
                         else
                             return '<a href="'+Bzhan_url+'">B站</a>';
-                        
                     }
                     return "暂无";
                 }
@@ -97,7 +96,7 @@ $(document).ready(function() {
             { "targets": [ 7 ], "visible": false, "searchable": false, }
         ],
         "order": [[0, 'desc']],
-        // "dom": '<"top"i>rt<"bottom"flp><"clear">',
+        
         initComplete: function () {
             // 每一行的第4列元素
             this.api().columns(4).every( function () {
@@ -126,11 +125,49 @@ $(document).ready(function() {
             // data: row data
             // dataIndex:row data's index
             $(row).addClass(data.类名);
-            
-            if(data.类名=="music_stage"){
-                $(row).css("background-color","red");
-            }
 
+            if(data.类名=="official"){
+                $(row).css("background-color","rgb(250, 236, 236)");
+            }
+            else if(data.类名=="music_stage"){
+                $(row).css("background-color","rgb(217, 251, 255)");
+            }
+            else if(data.类名=="Radio"){
+                $(row).css("background-color","rgb(255, 250, 200)");
+            }
+            else if(data.类名=="group_arts"){
+                $(row).css("background-color","rgb(201, 245, 255)");
+            }
+            else if(data.类名=="tv_station"){
+                $(row).css("background-color","aliceblue");
+            }
+            else if(data.类名=="news"){
+                $(row).css("background-color","#cdcfff");
+            }
+            else if(data.类名=="pub_performance"){
+                $(row).css("background-color","#FFCC99");
+            }
+            else if(data.类名=="pub_performance"){
+                $(row).css("background-color","#FFCC99");
+            }
+            else if(data.类名=="magazine"||data.类名=="cf"){
+                $(row).css("background-color","#ffff9c");
+            }
+            else if(data.类名=="VLOG"){
+                $(row).css("background-color","#d4fab4");
+            }
+            else if(data.类名=="concert"||data.类名=="FMs"){
+                $(row).css("background-color","#bbedff");
+            }
+            else if(data.类名=="live"){
+                $(row).css("background-color","#ffe3c4");
+            }
+            else if(data.类名=="teleplay"){
+                $(row).css("background-color","#ffcefa");
+            }
+            else if(data.类名=="other"){
+                $(row).css("background-color","#ebd7f4");
+            }
         }
     });
 });
