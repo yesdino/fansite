@@ -30,6 +30,7 @@ $(document).ready(function() {
 
     $("#all_tab").DataTable({
         "ajax": "excel/"+year+".json",
+        "pageLength": 25,
         "columns": [
             { "data": "日期" }, //0
             { "data": "标题" }, //1
