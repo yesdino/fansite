@@ -28,6 +28,10 @@ $(document).ready(function() {
     if(!year)
         year = "18"
 
+    var focusObj = $(".20"+year);
+    focusObj.siblings("font-weight","");
+    focusObj.css("font-weight","800");
+
     $("#all_tab").DataTable({
         "ajax": "excel/"+year+".json",
         "pageLength": 25,
@@ -229,13 +233,13 @@ table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.s
                 </div>
                 <div class="navbar-collapse collapse" id="nav_collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="BTOB.html?year=12">2012</a></li>     
-                        <li><a href="BTOB.html?year=13">2013</a></li>
-                        <li><a href="BTOB.html?year=14">2014</a></li>
-                        <li><a href="BTOB.html?year=15">2015</a></li>
-                        <li><a href="BTOB.html?year=16">2016</a></li>
-                        <li><a href="BTOB.html?year=17">2017</a></li>
-                        <li><a href="BTOB.html?year=18">2018</a></li>
+                        <li class="2012"><a href="BTOB.html?year=12">2012</a></li>     
+                        <li class="2013"><a href="BTOB.html?year=13">2013</a></li>
+                        <li class="2014"><a href="BTOB.html?year=14">2014</a></li>
+                        <li class="2015"><a href="BTOB.html?year=15">2015</a></li>
+                        <li class="2016"><a href="BTOB.html?year=16">2016</a></li>
+                        <li class="2017"><a href="BTOB.html?year=17">2017</a></li>
+                        <li class="2018"><a href="BTOB.html?year=18">2018</a></li>
                     </ul>
                 </div>
             </div>
