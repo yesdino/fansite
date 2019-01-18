@@ -91,6 +91,7 @@ $(document).ready(function() {
                     return "暂无";
                 }
             },
+            { "targets": [ 4 ], "orderable": false },
             { "targets": [ 2 ], "visible": false, "searchable": false, },
             { "targets": [ 5 ], "visible": false, "searchable": false, },
             { "targets": [ 7 ], "visible": false, "searchable": false, }
@@ -104,14 +105,11 @@ $(document).ready(function() {
                 var select = $('<select><option value=""></option></select>')
                     .appendTo( $(classify_col.header()).empty() )
                     .on( 'change', function () {
-                        var val = $.fn.dataTable.util.escapeRegex(
-                            $(this).val()
-                        );
-                        classify_col
-                            // 搜索条件
-                            .search( val ? '^'+val+'$' : '', true, false )
-                            // 开始加载
-                            .draw();
+                            var val = $.fn.dataTable.util.escapeRegex(
+                                $(this).val()
+                            );
+                            // 搜索条件 // 开始加载
+                            classify_col.search( val ? '^'+val+'$' : '', true, false ).draw();
                     } );
                 // 遍历第三列每一个元素 不重复排序添加到option中
                 classify_col.data().unique().sort().each( function ( d, j ) {
