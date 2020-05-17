@@ -159,7 +159,8 @@ body {
 
 /*手机*/
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) 
+{
     width: 50px;
     background-color: #fa979a;
 }
