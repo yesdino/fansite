@@ -2,9 +2,6 @@ $(document).ready(function() {
     var year = getQueryVariable("year");
     console.log("year :"+year);
     load_table(year);
-
-
-
 });
 
 
