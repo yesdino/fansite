@@ -3,91 +3,78 @@ body {
     /* background-color:red; */
 }
 
-/*
- .navbar-default .navbar-nav>li>a, .navbar-header, .container-fluid, .dropdown-menu li a { color: white; background-color: cornflowerblue; } .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus { color: cornflowerblue; background-color: transparent; }
-*/
-
-/*
- .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus { color: blue; background-color: green; }
-*/
-
-/*
- #mon_selet a, #mon_selet a:hover, #mon_selet a:visited, #mon_selet a :focus { display: block; margin-bottom: 30px; color: #777777; }
-*/
-
 .official {
     /*官方*/
-    background-color: rgb(250, 236, 236)
+    background-color: rgb(250, 236, 236) !important;
 }
 
 .music_stage {
     /*音放*/
-    background-color: rgb(217, 251, 255)
+    background-color: rgb(217, 251, 255) !important;
 }
 
 .Radio {
     /*电台*/
-    background-color: rgb(255, 250, 200)
+    background-color: rgb(255, 250, 200) !important;
 }
 
 
 .group_arts {
     /*团综*/
-    background-color: rgb(201, 245, 255)
+    background-color: rgb(201, 245, 255) !important;
 }
 
 .tv_station {
     /*放送*/
-    background-color: aliceblue;
+    background-color: aliceblue !important;
 }
 
 .news {
     /*新闻*/
-    background-color: #cdcfff;
+    background-color: #cdcfff !important;
 }
 
 .pub_performance {
     /*公演*/
-    background-color: #FFCC99;
+    background-color: #FFCC99 !important;
 }
 
 .magazine,
 .cf {
     /* 画报 & 广告 */
-    background-color: #ffff9c;
+    background-color: #ffff9c !important;
 }
 
 .VLOG {
     /*VLOG*/
-    background-color: #d4fab4;
+    background-color: #d4fab4 !important;
 }
 
 .concert,
 .FM {
     /*演唱会 FM */
-    background-color: #bbedff;
+    background-color: #bbedff !important;
 }
 
 .live {
     /*直播*/
-    background-color: #ffe3c4;
+    background-color: #ffe3c4 !important;
 }
 
 .teleplay {
     /*电视剧*/
-    background-color: #ffcefa;
+    background-color: #ffcefa !important;
 }
 
 .other {
     /*其他*/
-    background-color: #ebd7f4;
+    background-color: #ebd7f4 !important;
 }
 
 .army {
-    /*其他*/
-    background-color: #97afff;
+    /*军队*/
+    background-color: #97afff !important;
 }
-
 
 
 #TABLE {
@@ -155,6 +142,24 @@ body {
     overflow: hidden;
 }
 
+
+
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+    background-color:transparent;
+}
+table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+    background-color: transparent;
+}
+
+
+#clas_fy_sel {
+    display: inline;
+}
+
+#clas_fy_sel select {
+    border-style: none;
+    width: 9px !important;
+}
 
 
 /*手机*/

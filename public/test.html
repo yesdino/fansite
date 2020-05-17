@@ -9,194 +9,18 @@
 <link rel="shortcut icon" href="static/img/logo.png">
 <title>BTOB | 资源汇总</title>
 
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
-<link rel="stylesheet" type="text/css" href="static/css/style1.css">
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="static/js/data_loading.js"></script>
+<!-- <script type="text/javascript" src="static/js/public11.js"></script> -->
 
-
-<!-- <script type="text/javascript" src="static/js/public.js"></script> -->
-<script type="text/javascript">
-$(document).ready(function() {
-    var year = getQueryVariable("year");
-    // console.log("year :"+year);
-    
-    if(!year)
-        year = "18"
-
-    var focusObj = $(".20"+year);
-    focusObj.siblings("font-weight","");
-    focusObj.css("font-weight","800");
-
-    $("#all_tab").DataTable({
-        "ajax": "excel/"+year+".json",
-        "pageLength": 25,
-        "columns": [
-            { "data": "日期" }, //0
-            { "data": "标题" }, //1
-            { "data": "在线" }, //2 hidden
-            { "data": "B站" },  //3
-            { "data": "分类" }, //4
-            { "data": "类名" }, //5 hidden
-            { "data": "度盘" }, //6 
-            { "data": "密码" }  //7 hidden
-        ],
-        // 列定义
-        "columnDefs": [
-            {
-                // "标题"
-                "targets": [ 1 ],
-                render: function (data, type, row, meta) {
-                    if (type === 'display') {
-                        var onlink_url = row.在线;
-                        if(onlink_url=="xx")
-                            return data;
-                        else
-                            return '<a href="'+onlink_url+'">'+ data+'</a>';
-                    }
-                    return data;
-                }
-            },
-            {
-                // "B站"
-                "targets": [ 3 ],
-                render: function (data, type, row, meta) {
-                    if (type === 'display') {
-                        var Bzhan_url = row.B站;
-                        if(Bzhan_url=="xx")
-                            return "暂无";
-                        else
-                            return '<a href="'+Bzhan_url+'">B站</a>';
-                    }
-                    return "暂无";
-                }
-            },
-            {
-                // "度盘"
-                "targets": [ 6 ],
-                render: function (data, type, row, meta) {
-                    if (type === 'display') {
-                        var psword = row.密码;
-                        if(data=="xx"){
-                            return "暂无";
-                        }
-                        else{
-                            if(psword=="xx"){
-                                return '<a href="'+data+'">资源</a>';
-                            }
-                            else{
-                                return '<a href="'+data+'">资源</a>  ('+psword+')';
-                            }
-                        }
-                    }
-                    return "暂无";
-                }
-            },
-            { "targets": [ 4 ], "orderable": false },
-            { "targets": [ 2 ], "visible": false, "searchable": false, },
-            { "targets": [ 5 ], "visible": false, "searchable": false, },
-            { "targets": [ 7 ], "visible": false, "searchable": false, }
-        ],
-        "order": [[0, 'desc']],
-        // 表格全部行加載完成時調用
-        "initComplete": function () {
-            console.log( '表格初始化完成 initComplete' );       // DEBUG
-            this.api().columns(4).every( function () {
-                var classify_col = this;        // 每一行的第4列元素
-                var select = $('<select><option value=""></option></select>')
-                    .appendTo( $(classify_col.header()).empty() )
-                    .on( 'change', function () {
-                            var val = $.fn.dataTable.util.escapeRegex(
-                                $(this).val()
-                            );
-                            // 搜索条件 // 开始加载
-                            classify_col.search( val ? '^'+val+'$' : '', true, false ).draw();
-                    } );
-                // 遍历第三列每一个元素 不重复排序添加到option中
-                classify_col.data().unique().sort().each( function ( d, j ) {
-                    select.append( '<option value="'+d+'">'+d+'</option>' )
-                } );
-            } );
-            
-
-
-        },
-        // 每一行创建完调用的函数
-        "createdRow": function (row, data, dataIndex) {
-            // console.log( '一行 createdRow:'+dataIndex ); // DEBUG
-            // row : tr dom
-            // data: row data
-            // dataIndex:row data's index
-            $(row).addClass(data.类名);
-            
-            if(data.类名=="official"){
-                $(row).css("background-color","rgb(250, 236, 236)");
-            }
-            else if(data.类名=="music_stage"){
-                $(row).css("background-color","rgb(217, 251, 255)");
-            }
-            else if(data.类名=="Radio"){
-                $(row).css("background-color","rgb(255, 250, 200)");
-            }
-            else if(data.类名=="group_arts"){
-                $(row).css("background-color","rgb(201, 245, 255)");
-            }
-            else if(data.类名=="tv_station"){
-                $(row).css("background-color","aliceblue");
-            }
-            else if(data.类名=="news"){
-                $(row).css("background-color","#cdcfff");
-            }
-            else if(data.类名=="pub_performance"){
-                $(row).css("background-color","#FFCC99");
-            }
-            else if(data.类名=="pub_performance"){
-                $(row).css("background-color","#FFCC99");
-            }
-            else if(data.类名=="magazine"||data.类名=="cf"){
-                $(row).css("background-color","#ffff9c");
-            }
-            else if(data.类名=="VLOG"){
-                $(row).css("background-color","#d4fab4");
-            }
-            else if(data.类名=="concert"||data.类名=="FM"){
-                $(row).css("background-color","#bbedff");
-            }
-            else if(data.类名=="live"){
-                $(row).css("background-color","#ffe3c4");
-            }
-            else if(data.类名=="teleplay"){
-                $(row).css("background-color","#ffcefa");
-            }
-            else if(data.类名=="other"){
-                $(row).css("background-color","#ebd7f4");
-            }
-            else if(data.类名=="army"){
-                $(row).css("background-color","#97afff");
-            }
-        }
-    });
-});
-
-function getQueryVariable(variable)
-{
-    var query = window.location.search.substring(1);
-    var vars = query.split("&");
-    for (var i=0;i<vars.length;i++) {
-        var pair = vars[i].split("=");
-        if(pair[0] == variable){
-            return pair[1];
-        }
-    }
-    return(false);
-}
-</script>
 <style>
-.group_arts {background-color: rgb(201, 245, 255)}
+/* .group_arts {background-color: rgb(201, 245, 255)}
 .tv_station {background-color: aliceblue;}
 .news {background-color: #cdcfff;}
 .pub_performance {background-color: #FFCC99;}
@@ -214,15 +38,13 @@ table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.st
 }
 table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
     background-color: transparent;
-}
+} */
 </style>
 
 </head>
 
-<!--<body oncontextmenu=self.event.returnValue=false onselectstart="return false">-->
 <body>
     <div id="all">
-        <!--navbar-->
         <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="NAV" style="position:fixed;top:0px;">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -247,10 +69,7 @@ table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.s
                 </div>
             </div>
         </div>
-        <!-- navbar end -->
 
-
-        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <div id="TABLE">
             <table id="all_tab" class="table display" style="width:100%">
                 <thead>
@@ -265,23 +84,12 @@ table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.s
                         <th>密码</th>       <!-- hidden -->
                     </tr>
                 </thead>
-                <!-- <tfoot>
-                    <tr>
-                        <th>日期</th>
-                        <th>在线观看</th>
-                        <th>B站</th>
-                        <th>分类</th>
-                        <th>资源 </th>
-                    </tr>
-                </tfoot> -->
             </table>
-            <!-- #TABLE end -->
 
             <!-- return top button -->
             <div type="button" class="btn btn-info btn-lg" style="position: fixed;bottom: 10px;right: 2%;">
                 <a class="glyphicon glyphicon-arrow-up" href="javascript:scrollTo(0,0);" style="color: white;display: block;"></a>
             </div>
         </div>
-        <!-- TABLE -->
 </body>
 </html>
