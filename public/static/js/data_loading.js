@@ -38,7 +38,7 @@ function load_table(year)
                         if(onlink_url=="xx")
                             return data;
                         else
-                            return '<a href="'+onlink_url+'">'+ data+'</a>';
+                            return '<a href="'+onlink_url+'" target="_blank">'+ data+'</a>';
                     }
                     return data;
                 }
@@ -52,7 +52,7 @@ function load_table(year)
                         if(Bzhan_url=="xx")
                             return "暂无";
                         else
-                            return '<a href="'+Bzhan_url+'">B站</a>';
+                            return '<a href="'+Bzhan_url+'" target="_blank">B站</a>';
                     }
                     return "暂无";
                 }
@@ -68,10 +68,10 @@ function load_table(year)
                         }
                         else{
                             if(psword=="xx"){
-                                return '<a href="'+data+'">资源</a>';
+                                return '<a href="'+data+'" target="_blank">资源</a>';
                             }
                             else{
-                                return '<a href="'+data+'">资源</a>  ('+psword+')';
+                                return '<a href="'+data+'" target="_blank">资源</a>  ('+psword+')';
                             }
                         }
                     }
